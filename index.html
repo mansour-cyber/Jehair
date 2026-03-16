@@ -45,9 +45,9 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to left,rgba(44,26,6,0) 30%,rgba(44,26,6,.72) 60%,rgba(44,26,6,.92) 100%);}
 .hero-inner{position:relative;z-index:2;min-height:100vh;max-width:var(--w);margin:0 auto;padding:0 48px;display:flex;align-items:center;}
 .hero-content{max-width:500px;padding:80px 0;}
-.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:18px;}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--gold2);margin-bottom:16px;font-weight:600;}
 .hero-logo-inline{height:60px;margin-bottom:16px;display:block;}
-.hero-h{font-family:var(--font-display);font-size:clamp(46px,7vw,78px);font-weight:800;color:#fff;line-height:1;margin-bottom:16px;letter-spacing:-1px;}
+.hero-h{font-family:var(--font-display);font-size:clamp(36px,7vw,72px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px;}
 .hero-h em{color:var(--gold2);font-style:italic;}
 .hero-p{font-size:16px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.9;max-width:420px;margin-bottom:24px;text-align:right;}
 .hero-social{display:flex;align-items:center;gap:10px;margin-bottom:28px;padding:12px 18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:50px;width:fit-content;}
@@ -82,8 +82,8 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .sec.ltinted{background:var(--pale);}
 .inner{max-width:var(--w);margin:0 auto;padding:0 48px;}
 .center{text-align:center;}
-.eyebrow{display:block;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
-.sec-h{font-family:var(--font-display);font-size:clamp(26px,4vw,44px);font-weight:800;color:var(--ink);line-height:1.15;margin-bottom:12px;letter-spacing:-.5px;}
+.eyebrow{display:block;font-size:12px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;font-weight:600;}
+.sec-h{font-family:var(--font-display);font-size:clamp(24px,4vw,42px);font-weight:800;color:var(--ink);line-height:1.2;margin-bottom:12px;}
 .sec-p{font-size:15px;font-weight:400;color:var(--ink2);line-height:1.9;margin-bottom:28px;max-width:520px;}
 .sec-p.mx{margin-left:auto;margin-right:auto;text-align:center;}
 .rule{width:44px;height:2px;background:var(--gold2);margin:12px 0 20px;}
@@ -171,7 +171,7 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .showcase-img-wrap:hover .showcase-img{transform:scale(1.03);}
 .showcase-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(240,226,204,0) 60%,var(--warm) 100%);}
 .showcase-content{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 64px 48px;}
-.showcase-kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;font-weight:600;}
+.showcase-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);margin-bottom:20px;font-weight:600;}
 .showcase-h{font-family:var(--font-display);font-size:clamp(34px,4.5vw,54px);font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-.5px;margin-bottom:8px;}
 .showcase-sub{font-size:18px;font-weight:400;color:var(--ink2);margin-bottom:28px;line-height:1.6;}
 .showcase-divider{width:48px;height:2px;background:linear-gradient(90deg,var(--gold2),var(--gold));margin-bottom:28px;border-radius:2px;}
@@ -248,7 +248,7 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 /* ── CTA SECTION ── */
 .cta-sec{background:linear-gradient(135deg,var(--pale),var(--latte));padding:80px 48px;text-align:center;border-top:1px solid var(--bdr);}
 .cta-logo{height:72px;margin:0 auto 28px;display:block;}
-.cta-h{font-family:var(--font-display);font-size:clamp(30px,5vw,52px);font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-.5px;}
+.cta-h{font-family:var(--font-display);font-size:clamp(28px,5vw,50px);font-weight:800;color:var(--ink);margin-bottom:10px;}
 .cta-p{font-size:15px;font-weight:400;color:var(--ink2);line-height:1.85;max-width:420px;margin:0 auto 20px;text-align:center;}
 .cta-prices{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:16px 0 4px;}
 .cta-price{background:var(--white);border:1.5px solid var(--bdr);border-radius:16px;padding:18px 28px;text-align:center;min-width:160px;}
@@ -299,7 +299,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 }
 @media(max-width:520px){
   .bens{grid-template-columns:1fr;}
-  .hero-h{font-size:46px;}
+  .hero-h{font-size:34px;line-height:1.15;}
   .reviews-grid{grid-template-columns:1fr;}
 }
 </style>
@@ -333,9 +333,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-kicker">قهوة الشعير الأصلية</div>
-      <img src="logo.png" class="hero-logo-inline" alt="Jehair">
-      <h1 class="hero-h">طعم<br><em>الوالدة</em><br>بفوائد أصيلة</h1>
+      <div class="hero-kicker">🌾 قهوة الشعير الأصلية</div>
+      <h1 class="hero-h">طعم <em>الوالدة</em><br>بفوائد أصيلة</h1>
       <p class="hero-p">ستة مكوّنات طبيعية نقية، مُعبّأة في ظروف أنيقة. تحضير فوري في 30 ثانية، نكهة خليجية أصيلة — بدون كافيين.</p>
       <div class="hero-social">
         <span class="hero-social-stars">⭐⭐⭐⭐⭐</span>
