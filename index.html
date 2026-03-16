@@ -31,8 +31,9 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 /* ── NAV ── */
 .nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);height:68px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;}
 .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.nav-logo{height:48px;width:auto;}
-.nav-tagline{font-size:10px;letter-spacing:2px;color:var(--gold);margin-top:2px;}
+.nav-logo-text{display:flex;flex-direction:column;gap:1px;}
+.nav-logo-name{font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--ink);line-height:1;}
+.nav-logo-sub{font-size:9px;font-weight:600;color:var(--gold);letter-spacing:2px;}
 .nav-links{display:flex;align-items:center;gap:6px;}
 .nav-link{font-size:13px;color:var(--ink2);text-decoration:none;font-weight:500;padding:7px 15px;border-radius:50px;transition:all .2s;}
 .nav-link:hover{background:var(--pale);}
@@ -245,6 +246,16 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .faq-item[open] .faq-icon{transform:rotate(45deg);}
 .faq-body{font-size:14px;font-weight:400;color:var(--ink2);line-height:1.85;padding:0 22px 18px;text-align:right;}
 
+/* ── CTA LOGO TEXT ── */
+.cta-logo-text{display:flex;flex-direction:column;align-items:center;gap:2px;margin:0 auto 28px;}
+.cta-logo-name{font-family:var(--font-display);font-size:36px;font-weight:800;color:var(--ink);line-height:1;}
+.cta-logo-sub{font-size:10px;font-weight:600;color:var(--gold);letter-spacing:3px;}
+
+/* ── FOOTER LOGO TEXT ── */
+.footer-logo-text{display:flex;flex-direction:column;gap:1px;}
+.footer-logo-name{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--ink);line-height:1;}
+.footer-logo-sub{font-size:9px;font-weight:600;color:var(--gold);letter-spacing:2px;}
+
 /* ── CTA SECTION ── */
 .cta-sec{background:linear-gradient(135deg,var(--pale),var(--latte));padding:80px 48px;text-align:center;border-top:1px solid var(--bdr);}
 .cta-logo{height:72px;margin:0 auto 28px;display:block;}
@@ -315,8 +326,10 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <!-- NAV -->
 <nav class="nav">
   <a href="#top" class="nav-brand">
-    <img src="logo.png" class="nav-logo" alt="Jehair">
-    <div class="nav-tagline">NATURAL PRODUCTS</div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Jehair</span>
+      <span class="nav-logo-sub">NATURAL PRODUCTS</span>
+    </div>
   </a>
   <div class="nav-links">
     <a href="#products" class="nav-link">المنتجات</a>
@@ -704,7 +717,10 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 
 <!-- CTA SECTION -->
 <section class="cta-sec" id="order">
-  <img src="logo.png" class="cta-logo" alt="Jehair">
+  <div class="cta-logo-text">
+    <span class="cta-logo-name">Jehair</span>
+    <span class="cta-logo-sub">NATURAL PRODUCTS</span>
+  </div>
   <h2 class="cta-h">ابدأ رحلتك الصحية اليوم</h2>
   <p class="cta-p">انضم لأكثر من 500 عميل اختاروا جهيّر — شحن سريع لجميع مناطق المملكة</p>
   <div class="cta-prices">
@@ -726,7 +742,10 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">
-    <img src="logo.png" class="footer-logo" alt="Jehair">
+    <div class="footer-logo-text">
+      <span class="footer-logo-name">Jehair</span>
+      <span class="footer-logo-sub">NATURAL PRODUCTS</span>
+    </div>
     <div class="footer-name">Jehair Natural Products</div>
   </div>
   <p>© 2026 Jehair Natural Products · جميع الحقوق محفوظة</p>
