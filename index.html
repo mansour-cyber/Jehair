@@ -100,24 +100,27 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);direction:
 .prob-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;}
 .prob-p{font-size:13px;color:var(--ink2);line-height:1.7;text-align:center;}
 
-/* ── PROBLEM WITH IMAGE ── */
-.prob-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-top:36px;}
-.prob-img{width:100%;min-height:420px;object-fit:cover;object-position:center;display:block;border-radius:20px;box-shadow:0 12px 40px rgba(44,26,6,.10);}
-.prob-cards-col{display:flex;flex-direction:column;gap:12px;}
-.prob-card-v{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:var(--white);border:1.5px solid var(--bdr);border-radius:14px;transition:all .2s;}
+/* ── IMAGE + CARD OVERLAY (all image sections) ── */
+.ic-wrap{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(44,26,6,.13);margin-top:36px;}
+.ic-img{width:100%;min-height:540px;object-fit:cover;object-position:center;display:block;}
+.ic-card{position:absolute;top:40px;bottom:40px;right:40px;width:min(400px,44%);background:rgba(254,250,245,.97);border-radius:20px;padding:28px;overflow-y:auto;box-shadow:0 8px 32px rgba(44,26,6,.13);}
+.prob-cards-col{display:flex;flex-direction:column;gap:10px;}
+.prob-card-v{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--white);border:1.5px solid var(--bdr);border-radius:14px;transition:all .2s;}
 .prob-card-v:hover{border-color:rgba(184,135,42,.2);}
 .prob-ico-v{font-size:20px;flex-shrink:0;margin-top:2px;}
 .prob-h-v{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
 .prob-p-v{font-size:13px;color:var(--ink2);line-height:1.6;}
-.prob-answer{padding:16px 18px;background:var(--pale);border:1.5px solid rgba(184,135,42,.25);border-radius:14px;margin-top:4px;}
+.prob-answer{padding:12px 14px;background:var(--pale);border:1.5px solid rgba(184,135,42,.25);border-radius:14px;margin-top:2px;}
 .prob-answer-tag{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
 .prob-answer-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;}
 .prob-answer-p{font-size:13px;color:var(--ink2);line-height:1.6;}
-
-/* ── LIFESTYLE / BENEFITS LAYOUT ── */
-.lifestyle-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
-.bens-in-layout{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.lifestyle-img{width:100%;height:560px;object-fit:cover;object-position:center;display:block;border-radius:20px;box-shadow:0 12px 40px rgba(44,26,6,.10);}
+.bens-in-layout{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.ic-card .ben{padding:12px 10px;}
+.ic-card .ben-ico{font-size:20px;margin-bottom:5px;}
+.ic-card .ben-h{font-size:12px;margin-bottom:2px;}
+.ic-card .ben-p{font-size:11px;line-height:1.6;}
+.ic-card .how-num{width:36px;height:36px;min-width:36px;font-size:14px;}
+.ic-card .how-p{font-size:12px;}
 
 /* ── SOLUTION CARDS ── */
 .sol-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
@@ -175,8 +178,6 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);direction:
 .ing-ico{font-size:24px;flex-shrink:0;}
 .ing-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px;}
 .ing-desc{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.6;text-align:right;}
-.how-photo{width:100%;border-radius:20px;display:block;box-shadow:0 12px 40px rgba(60,34,16,.12);}
-
 /* ── BENEFITS ── */
 .bens{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;}
 .ben{background:var(--pale);border:1.5px solid var(--bdr);border-radius:var(--r);padding:22px;transition:all .25s;}
@@ -186,7 +187,6 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);direction:
 .ben-p{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.7;text-align:right;}
 
 /* ── HOW ── */
-.how-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
 .how-steps{display:flex;flex-direction:column;gap:18px;}
 .how-step{display:flex;gap:14px;align-items:flex-start;}
 .how-num{width:42px;height:42px;min-width:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;font-weight:800;flex-shrink:0;}
@@ -289,17 +289,14 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   .hero-inner{padding:0 20px;min-height:560px;}
   .hero-content{padding:40px 0;max-width:100%;}
   .hero-overlay{background:linear-gradient(to bottom,rgba(8,3,1,.5) 0%,rgba(8,3,1,.75) 100%);}
-  .ing-layout,.how-layout{grid-template-columns:1fr;}
   .bens{grid-template-columns:1fr 1fr;}
   .policy-grid{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
   .problem-grid{grid-template-columns:1fr 1fr;}
-  .prob-layout{grid-template-columns:1fr;}
-  .prob-img{min-height:260px;height:280px;}
-  .lifestyle-layout{grid-template-columns:1fr;}
-  .lifestyle-img{height:280px;object-position:center;}
   .bens-in-layout{grid-template-columns:1fr 1fr;}
   .sol-cards{grid-template-columns:1fr;}
+  .ic-img{min-height:340px;}
+  .ic-card{position:relative;top:auto;bottom:auto;right:auto;width:calc(100% - 32px);margin:-64px auto 0;border-radius:0 0 20px 20px;padding:22px;overflow-y:visible;}
   .inner{padding:0 20px;}.sec{padding:60px 0;}
   .trust{padding:14px 16px;}
   .cta-sec,.quote-sec{padding:60px 20px;}
@@ -312,7 +309,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   .bens{grid-template-columns:1fr;}
   .bens-in-layout{grid-template-columns:1fr;}
   .ing-grid{grid-template-columns:1fr;}
-  .lifestyle-img{height:240px;}
+  .ic-img{min-height:260px;}
+  .ic-card .ben{padding:10px;}
   .problem-grid{grid-template-columns:1fr;}
   .hero-h{font-size:34px;line-height:1.15;}
   .reviews-grid{grid-template-columns:1fr;}
@@ -391,39 +389,37 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
       <div class="rule cx"></div>
       <p class="sec-p mx">كثير من منتجات الشعير تُباع بعبوات كبيرة تحتاج قياسًا وتحضيرًا تقليديًا — مناسب أحيانًا، لكنه ليس دائمًا الأسهل لروتين مشغول</p>
     </div>
-    <div class="prob-layout">
-      <!-- RTL: first child = RIGHT col (cards), second child = LEFT col (image) -->
-      <div class="prob-cards-col">
-        <div class="prob-card-v">
-          <span class="prob-ico-v">🫙</span>
-          <div>
-            <div class="prob-h-v">عبوات كبيرة</div>
-            <p class="prob-p-v">كميات أكثر من احتياجك في كل تحضير</p>
+    <div class="ic-wrap">
+      <img src="IMG_0496.jpeg" class="ic-img" alt="مقارنة قهوة الشعير التقليدية مع جهيّر" loading="lazy">
+      <div class="ic-card">
+        <div class="prob-cards-col">
+          <div class="prob-card-v">
+            <span class="prob-ico-v">🫙</span>
+            <div>
+              <div class="prob-h-v">عبوات كبيرة</div>
+              <p class="prob-p-v">كميات أكثر من احتياجك في كل تحضير</p>
+            </div>
+          </div>
+          <div class="prob-card-v">
+            <span class="prob-ico-v">⚖️</span>
+            <div>
+              <div class="prob-h-v">قياس متكرر</div>
+              <p class="prob-p-v">وقت إضافي مع كل كوب — يوم بعد يوم</p>
+            </div>
+          </div>
+          <div class="prob-card-v">
+            <span class="prob-ico-v">🔄</span>
+            <div>
+              <div class="prob-h-v">تحضير تقليدي</div>
+              <p class="prob-p-v">خطوات أكثر مما يحتاجه روتين يومي سريع</p>
+            </div>
+          </div>
+          <div class="prob-answer">
+            <div class="prob-answer-tag">جهيّر</div>
+            <div class="prob-answer-h">خلطة سعودية أصيلة من ذاكرة مجالس الجدة</div>
+            <p class="prob-answer-p">نكهة الجدة السعودية المألوفة، مقدّمة بشكل واضح وسهل للاستخدام اليومي</p>
           </div>
         </div>
-        <div class="prob-card-v">
-          <span class="prob-ico-v">⚖️</span>
-          <div>
-            <div class="prob-h-v">قياس متكرر</div>
-            <p class="prob-p-v">وقت إضافي مع كل كوب — يوم بعد يوم</p>
-          </div>
-        </div>
-        <div class="prob-card-v">
-          <span class="prob-ico-v">🔄</span>
-          <div>
-            <div class="prob-h-v">تحضير تقليدي</div>
-            <p class="prob-p-v">خطوات أكثر مما يحتاجه روتين يومي سريع</p>
-          </div>
-        </div>
-        <div class="prob-answer">
-          <div class="prob-answer-tag">جهيّر</div>
-          <div class="prob-answer-h">خلطة سعودية أصيلة من ذاكرة مجالس الجدة</div>
-          <p class="prob-answer-p">نكهة الجدة السعودية المألوفة، مقدّمة بشكل واضح وسهل للاستخدام اليومي</p>
-        </div>
-      </div>
-      <!-- Image: shows the contrast between bulk barley and the Jehair sachet -->
-      <div>
-        <img src="IMG_0496.jpeg" class="prob-img" alt="مقارنة قهوة الشعير التقليدية مع جهيّر" loading="lazy">
       </div>
     </div>
   </div>
@@ -589,19 +585,17 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
       <div class="rule cx"></div>
       <p class="sec-p mx">خلطة سعودية متوارثة، مقدّمة بتنسيق يومي عملي — النكهة من ذاكرة المجلس، والتغليف من الحاضر</p>
     </div>
-    <div class="lifestyle-layout">
-      <!-- RTL: first child = RIGHT col (benefit cards), second child = LEFT col (lifestyle image) -->
-      <div class="bens-in-layout">
-        <div class="ben"><span class="ben-ico">☕</span><div class="ben-h">بلا كافيين</div><p class="ben-p">بديل يومي مناسب لمن يفضل تجنب الكافيين في روتينه</p></div>
-        <div class="ben"><span class="ben-ico">🎯</span><div class="ben-h">جرعة مضبوطة</div><p class="ben-p">كل ظرف لكوب واحد — لا قياس ولا تخمين في كل مرة</p></div>
-        <div class="ben"><span class="ben-ico">⚡</span><div class="ben-h">تحضير سريع</div><p class="ben-p">ظرف + ماء ساخن + تحريك — جاهز خلال لحظات</p></div>
-        <div class="ben"><span class="ben-ico">🎒</span><div class="ben-h">سهل الحمل</div><p class="ben-p">تغليف فردي خفيف مناسب للعمل والسفر والمنزل</p></div>
-        <div class="ben"><span class="ben-ico">🏺</span><div class="ben-h">نكهة من ذاكرة المجلس</div><p class="ben-p">هيل، زعفران، وشعير بلدي نجدي — طعم مألوف تعرفه من مجالس الجدة السعودية</p></div>
-        <div class="ben"><span class="ben-ico">🌿</span><div class="ben-h">خلطة سعودية متوارثة</div><p class="ben-p">مستلهمة من وصفة قديمة من بيوت نجد، بلا إضافات صناعية</p></div>
-      </div>
-      <!-- Lifestyle image: desk/work setting communicating daily routine fit -->
-      <div>
-        <img src="IMG_0498.jpeg" class="lifestyle-img" alt="جهيّر — يناسب روتينك اليومي" loading="lazy">
+    <div class="ic-wrap">
+      <img src="IMG_0498.jpeg" class="ic-img" alt="جهيّر — يناسب روتينك اليومي" loading="lazy">
+      <div class="ic-card">
+        <div class="bens-in-layout">
+          <div class="ben"><span class="ben-ico">☕</span><div class="ben-h">بلا كافيين</div><p class="ben-p">بديل يومي مناسب لمن يفضل تجنب الكافيين في روتينه</p></div>
+          <div class="ben"><span class="ben-ico">🎯</span><div class="ben-h">جرعة مضبوطة</div><p class="ben-p">كل ظرف لكوب واحد — لا قياس ولا تخمين</p></div>
+          <div class="ben"><span class="ben-ico">⚡</span><div class="ben-h">تحضير سريع</div><p class="ben-p">ظرف + ماء ساخن — جاهز خلال لحظات</p></div>
+          <div class="ben"><span class="ben-ico">🎒</span><div class="ben-h">سهل الحمل</div><p class="ben-p">تغليف فردي خفيف مناسب للعمل والسفر</p></div>
+          <div class="ben"><span class="ben-ico">🏺</span><div class="ben-h">نكهة المجلس</div><p class="ben-p">هيل، زعفران، وشعير نجدي — طعم مألوف من بيت الجدة</p></div>
+          <div class="ben"><span class="ben-ico">🌿</span><div class="ben-h">خلطة متوارثة</div><p class="ben-p">من بيوت نجد، بلا إضافات صناعية</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -631,12 +625,15 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <!-- HOW TO -->
 <section class="sec ltinted" id="how">
   <div class="inner">
-    <div class="how-layout">
-      <div>
-        <span class="eyebrow">طريقة التحضير</span>
-        <h2 class="sec-h">جاهز في<br>لحظات</h2>
-        <div class="rule"></div>
-        <p class="sec-p">نفس النكهة الأصيلة، بخطوات أبسط وتغليف يومي عملي</p>
+    <div class="center">
+      <span class="eyebrow">طريقة التحضير</span>
+      <h2 class="sec-h">جاهز في لحظات</h2>
+      <div class="rule cx"></div>
+      <p class="sec-p mx">نفس النكهة الأصيلة، بخطوات أبسط وتغليف يومي عملي</p>
+    </div>
+    <div class="ic-wrap">
+      <img src="IMG_0494.jpeg" class="ic-img" alt="طريقة تحضير جهيّر — ظرف واحد لكوب واحد" loading="lazy">
+      <div class="ic-card">
         <div class="how-steps">
           <div class="how-step"><div class="how-num">١</div><div><div class="how-h">افتح الظرف</div><div class="how-p">الجرعة المثالية جاهزة — بدون أي قياس</div></div></div>
           <div class="how-step"><div class="how-num">٢</div><div><div class="how-h">أضف ماء ساخن</div><div class="how-p">200 مل بدرجة حرارة مناسبة للشرب</div></div></div>
@@ -644,7 +641,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
           <div class="how-step"><div class="how-num">٤</div><div><div class="how-h">استمتع 🍵</div><div class="how-p">أضف عسلًا أو حليبًا حسب رغبتك</div></div></div>
         </div>
       </div>
-      <div><img src="IMG_0494.jpeg" class="how-photo" alt="طريقة تحضير جهيّر — ظرف واحد لكوب واحد" loading="lazy"></div>
     </div>
   </div>
 </section>
