@@ -8,7 +8,7 @@
 <meta property="og:description" content="قهوة شعير فورية بلا كافيين — ظروف فردية لكوب واحد. 10 ظروف بـ 45 ريال، شحن مجاني فوق 200 ريال.">
 <meta property="og:image" content="IMG_0495.jpeg">
 <meta property="og:type" content="website">
-<meta name="description" content="جهيّر قهوة شعير فورية بلا كافيين — ظروف فردية مصممة للكوب الواحد، لروتين يومي أسرع وأسهل. اطلب عبر واتساب.">
+<meta name="description" content="جهيّر خلطة شعير تراثية بطابع أصيل — بلا كافيين، في ظروف فردية أنيقة مصممة للكوب الواحد. اطلب عبر واتساب.">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -169,15 +169,14 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);direction:
 }
 
 /* ── INGREDIENTS ── */
-.ing-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
-.ing-photo{width:100%;border-radius:20px;display:block;box-shadow:0 12px 40px rgba(44,26,6,.10);}
-.how-photo{width:100%;border-radius:20px;display:block;box-shadow:0 12px 40px rgba(60,34,16,.12);}
-.ing-rows{display:flex;flex-direction:column;gap:10px;}
-.ing-row{display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--pale);border:1px solid var(--bdr);border-radius:var(--r);transition:all .2s;}
-.ing-row:hover{border-color:rgba(184,135,42,.3);}
+.ing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:0;}
+.ing-heritage{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--pale),var(--latte));border:1.5px solid rgba(184,135,42,.25);border-radius:50px;padding:9px 22px;margin:12px auto 28px;font-size:13px;font-weight:600;color:var(--gold);width:fit-content;letter-spacing:.3px;}
+.ing-row{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--pale);border:1px solid var(--bdr);border-radius:var(--r);transition:all .2s;}
+.ing-row:hover{border-color:rgba(184,135,42,.3);background:var(--warm);}
 .ing-ico{font-size:24px;flex-shrink:0;}
 .ing-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px;}
 .ing-desc{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.6;text-align:right;}
+.how-photo{width:100%;border-radius:20px;display:block;box-shadow:0 12px 40px rgba(60,34,16,.12);}
 
 /* ── BENEFITS ── */
 .bens{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;}
@@ -313,6 +312,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 @media(max-width:520px){
   .bens{grid-template-columns:1fr;}
   .bens-in-layout{grid-template-columns:1fr;}
+  .ing-grid{grid-template-columns:1fr;}
   .lifestyle-img{height:240px;}
   .problem-grid{grid-template-columns:1fr;}
   .hero-h{font-size:34px;line-height:1.15;}
@@ -352,14 +352,14 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-kicker">🌾 قهوة شعير فورية · بلا كافيين</div>
-      <h1 class="hero-h">ظرف واحد،<br><em>كوب واحد</em></h1>
-      <p class="hero-sub">مصمم لروتينك اليومي</p>
-      <p class="hero-p">جهيّر قهوة شعير فورية في ظروف فردية أنيقة — كل ظرف مخصص لكوب واحد، لتحضير سريع بدون قياس وبدون تعقيد.</p>
+      <div class="hero-kicker">🌾 خلطة تراثية متوارثة · بلا كافيين</div>
+      <h1 class="hero-h">خلطة الجدة،<br><em>بحلّة يومية</em></h1>
+      <p class="hero-sub">نكهة متوارثة، تقديم أنيق</p>
+      <p class="hero-p">جهيّر خلطة شعير تراثية مستلهمة من وصفة متوارثة عبر الأجيال — قُدّمت اليوم في ظروف فردية أنيقة، كل ظرف لكوب واحد بنفس النكهة المألوفة من الذاكرة.</p>
       <div class="hero-tags">
         <span class="hero-tag">🌾 بلا كافيين</span>
+        <span class="hero-tag">🏺 خلطة تراثية متوارثة</span>
         <span class="hero-tag">📦 10 ظروف في البوكس</span>
-        <span class="hero-tag">⚡ جاهز في لحظات</span>
         <span class="hero-tag">✨ تغليف فردي أنيق</span>
       </div>
       <div class="hero-btns">
@@ -375,7 +375,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   <div class="trust-row">
     <div class="trust-item"><span class="t-ico">🌾</span><span class="t-txt">بلا كافيين</span></div>
     <div class="trust-item"><span class="t-ico">📦</span><span class="t-txt"><strong>10 ظروف</strong> في البوكس</span></div>
-    <div class="trust-item"><span class="t-ico">⚡</span><span class="t-txt">تحضير سريع</span></div>
+    <div class="trust-item"><span class="t-ico">🏺</span><span class="t-txt">وصفة متوارثة</span></div>
     <div class="trust-item"><span class="t-ico">🚚</span><span class="t-txt">شحن مجاني فوق 200 ر.س</span></div>
     <div class="trust-item"><span class="t-ico">🛡️</span><span class="t-txt">ضمان الاستبدال</span></div>
     <div class="trust-item"><span class="t-ico">📲</span><span class="t-txt">رد فوري على واتساب</span></div>
@@ -418,8 +418,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         </div>
         <div class="prob-answer">
           <div class="prob-answer-tag">جهيّر</div>
-          <div class="prob-answer-h">ظرف واحد = كوب واحد — بدون قياس</div>
-          <p class="prob-answer-p">تجربة أوضح وأسهل، مصممة للاستخدام اليومي</p>
+          <div class="prob-answer-h">خلطة تراثية أصيلة، في ظرف واحد لكوب واحد</div>
+          <p class="prob-answer-p">نكهة متوارثة بطابع خليجي مألوف، مقدّمة بشكل أوضح وأسهل للاستخدام اليومي</p>
         </div>
       </div>
       <!-- Image: shows the contrast between bulk barley and the Jehair sachet -->
@@ -435,26 +435,26 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <section class="sec ltinted">
   <div class="inner">
     <div class="center">
-      <span class="eyebrow">الحل</span>
-      <h2 class="sec-h">حل أبسط لقهوة الشعير اليومية</h2>
+      <span class="eyebrow">جهيّر</span>
+      <h2 class="sec-h">تراث أصيل،<br>تقديم يومي عصري</h2>
       <div class="rule cx"></div>
-      <p class="sec-p mx">بدل العبوات الكبيرة والتحضير المتكرر، جهيّر تقدم تجربة أوضح وأسهل — ظرف واحد لكوب واحد في كل مرة</p>
+      <p class="sec-p mx">خلطة شعير متوارثة، قُدّمت اليوم بشكل أوضح وأسهل — نفس النكهة الأصيلة المألوفة، في ظرف واحد لكوب واحد في كل مرة</p>
     </div>
     <div class="sol-cards">
       <div class="sol-card">
         <div class="sol-card-num">١</div>
-        <div class="sol-card-h">ظرف واحد = كوب واحد</div>
-        <p class="sol-card-p">الجرعة المثالية جاهزة بداخل كل ظرف — لا قياس، لا تخمين، لا هدر</p>
+        <div class="sol-card-h">خلطة تراثية متوارثة</div>
+        <p class="sol-card-p">مستلهمة من وصفة عمرها أجيال — نكهة مألوفة من الذاكرة الخليجية</p>
       </div>
       <div class="sol-card">
         <div class="sol-card-num">٢</div>
-        <div class="sol-card-h">تحضير في خطوات بسيطة</div>
-        <p class="sol-card-p">افتح الظرف، أضف ماءً ساخنًا، حرّك — جاهز خلال لحظات بدون تعقيد</p>
+        <div class="sol-card-h">ظرف واحد = كوب واحد</div>
+        <p class="sol-card-p">الجرعة المثالية جاهزة بداخل كل ظرف — بدون قياس أو تعقيد في كل مرة</p>
       </div>
       <div class="sol-card">
         <div class="sol-card-num">٣</div>
-        <div class="sol-card-h">تغليف فردي وأنيق</div>
-        <p class="sol-card-p">كل ظرف مغلّف بشكل منفصل — سهل الحمل، مناسب للسفر والهدايا</p>
+        <div class="sol-card-h">تقديم أنيق في كل مرة</div>
+        <p class="sol-card-p">كل ظرف مغلّف بشكل منفصل — سهل الحمل ومناسب للهدايا</p>
       </div>
     </div>
   </div>
@@ -467,7 +467,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
     <img src="IMG_0497.jpeg" class="showcase-img" alt="جهيّر — بوكس 10 ظروف فردية" loading="lazy">
   </div>
   <div class="showcase-content">
-    <div class="showcase-kicker">🌾 قهوة شعير فورية · بلا كافيين</div>
+    <div class="showcase-kicker">🌾 خلطة تراثية متوارثة · بلا كافيين</div>
     <h2 class="showcase-h">بوكس جهيّر</h2>
     <p class="showcase-sub">10 ظروف فردية، كل ظرف لكوب واحد</p>
     <div class="showcase-divider"></div>
@@ -554,10 +554,10 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
             <td><span class="no">✘</span> كافيين عالٍ</td>
           </tr>
           <tr>
-            <td>أصالة الوصفة</td>
-            <td><span class="yes">✔</span> وصفة أصيلة مختارة</td>
+            <td>أصالة الخلطة</td>
+            <td><span class="yes">✔</span> خلطة تراثية متوارثة</td>
             <td><span class="neutral">—</span> يتفاوت</td>
-            <td><span class="no">✘</span> وصفة مختلفة</td>
+            <td><span class="no">✘</span> وصفة صناعية حديثة</td>
           </tr>
           <tr>
             <td>المكونات الطبيعية</td>
@@ -575,22 +575,20 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <!-- INGREDIENTS -->
 <section class="sec ltinted" id="ingredients">
   <div class="inner">
-    <div class="ing-layout">
-      <div>
-        <span class="eyebrow">المكوّنات</span>
-        <h2 class="sec-h">ستة مكوّنات —<br>مختارة بعناية</h2>
-        <div class="rule"></div>
-        <p class="sec-p">كل مكوّن في جهيّر مختار لجودته وأصالته — مكوّنات طبيعية نقية بطابع خليجي مألوف</p>
-        <div class="ing-rows">
-          <div class="ing-row"><span class="ing-ico">🌾</span><div><div class="ing-name">الشعير البلدي</div><div class="ing-desc">قاعدة الوصفة — طعم دافئ أصيل ومألوف</div></div></div>
-          <div class="ing-row"><span class="ing-ico">🟡</span><div><div class="ing-name">الكركم</div><div class="ing-desc">يضيف لونًا ذهبيًا وعمقًا في الطعم</div></div></div>
-          <div class="ing-row"><span class="ing-ico">🌸</span><div><div class="ing-name">الزعفران</div><div class="ing-desc">لمسة فاخرة وعطر لا يُنسى في كل كوب</div></div></div>
-          <div class="ing-row"><span class="ing-ico">🫚</span><div><div class="ing-name">الهيل</div><div class="ing-desc">الروح الخليجية الأصيلة في كل رشفة</div></div></div>
-          <div class="ing-row"><span class="ing-ico">🫙</span><div><div class="ing-name">الزنجبيل</div><div class="ing-desc">دفء وتوازن يكمّلان طعم المشروب</div></div></div>
-          <div class="ing-row"><span class="ing-ico">🌼</span><div><div class="ing-name">العصفر</div><div class="ing-desc">يمنح المشروب لونًا حيًا وطابعًا مميزًا</div></div></div>
-        </div>
-      </div>
-      <div><img src="ing.jpg" class="ing-photo" alt="مكوّنات قهوة الشعير جهيّر" loading="lazy"></div>
+    <div class="center">
+      <span class="eyebrow">المكوّنات</span>
+      <h2 class="sec-h">خلطة تراثية<br>بطابع أصيل</h2>
+      <div class="rule cx"></div>
+      <p class="sec-p mx">وصفة متوارثة عبر الأجيال — ستة مكوّنات طبيعية مختارة بعناية، تحمل نكهة مألوفة من الذاكرة الخليجية في كل ظرف</p>
+      <div class="ing-heritage">🏺 خلطة متوارثة منذ أكثر من 200 عام</div>
+    </div>
+    <div class="ing-grid">
+      <div class="ing-row"><span class="ing-ico">🌾</span><div><div class="ing-name">الشعير البلدي</div><div class="ing-desc">قاعدة الخلطة التراثية — طعم دافئ مألوف تعرفه من البيت</div></div></div>
+      <div class="ing-row"><span class="ing-ico">🟡</span><div><div class="ing-name">الكركم</div><div class="ing-desc">يضيف اللون الذهبي وعمق الطعم الأصيل</div></div></div>
+      <div class="ing-row"><span class="ing-ico">🌸</span><div><div class="ing-name">الزعفران</div><div class="ing-desc">لمسة فاخرة وعطر لا يُنسى — جزء من هوية الخلطة منذ القِدَم</div></div></div>
+      <div class="ing-row"><span class="ing-ico">🫚</span><div><div class="ing-name">الهيل</div><div class="ing-desc">الروح الخليجية الأصيلة في كل رشفة</div></div></div>
+      <div class="ing-row"><span class="ing-ico">🫙</span><div><div class="ing-name">الزنجبيل</div><div class="ing-desc">دفء وتوازن يكمّلان شخصية المشروب</div></div></div>
+      <div class="ing-row"><span class="ing-ico">🌼</span><div><div class="ing-name">العصفر</div><div class="ing-desc">يمنح المشروب لونًا حيًا وطابعًا مميزًا</div></div></div>
     </div>
   </div>
 </section>
@@ -600,10 +598,10 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <section class="sec">
   <div class="inner">
     <div class="center">
-      <span class="eyebrow">لماذا هذا الشكل؟</span>
-      <h2 class="sec-h">ليش يناسب روتينك اليومي؟</h2>
+      <span class="eyebrow">لماذا جهيّر؟</span>
+      <h2 class="sec-h">تراث أصيل بشكل<br>يناسب يومك</h2>
       <div class="rule cx"></div>
-      <p class="sec-p mx">شكل مختلف يصنع تجربة أسهل — في المكتب، المنزل، أو أثناء التنقل</p>
+      <p class="sec-p mx">خلطة متوارثة، مقدّمة بتنسيق يومي عملي — النكهة من الذاكرة، والتغليف من الحاضر</p>
     </div>
     <div class="lifestyle-layout">
       <!-- RTL: first child = RIGHT col (benefit cards), second child = LEFT col (lifestyle image) -->
@@ -612,8 +610,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         <div class="ben"><span class="ben-ico">🎯</span><div class="ben-h">جرعة مضبوطة</div><p class="ben-p">كل ظرف لكوب واحد — لا قياس ولا تخمين في كل مرة</p></div>
         <div class="ben"><span class="ben-ico">⚡</span><div class="ben-h">تحضير سريع</div><p class="ben-p">ظرف + ماء ساخن + تحريك — جاهز خلال لحظات</p></div>
         <div class="ben"><span class="ben-ico">🎒</span><div class="ben-h">سهل الحمل</div><p class="ben-p">تغليف فردي خفيف مناسب للعمل والسفر والمنزل</p></div>
-        <div class="ben"><span class="ben-ico">✨</span><div class="ben-h">تقديم أنيق</div><p class="ben-p">ظروف بتصميم عصري — يصلح هدية ويناسب الاستخدام اليومي</p></div>
-        <div class="ben"><span class="ben-ico">🌿</span><div class="ben-h">مكوّنات طبيعية</div><p class="ben-p">ستة مكوّنات طبيعية مختارة بعناية، بلا إضافات صناعية</p></div>
+        <div class="ben"><span class="ben-ico">🏺</span><div class="ben-h">نكهة من الذاكرة</div><p class="ben-p">هيل، زعفران، وشعير أصيل — طعم مألوف تعرفه من بيت الجدة</p></div>
+        <div class="ben"><span class="ben-ico">🌿</span><div class="ben-h">خلطة متوارثة</div><p class="ben-p">مستلهمة من وصفة قديمة بطابع خليجي أصيل، بلا إضافات صناعية</p></div>
       </div>
       <!-- Lifestyle image: desk/work setting communicating daily routine fit -->
       <div>
@@ -639,7 +637,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <!-- QUOTE -->
 <div class="quote-sec">
   <span class="quote-mark">"</span>
-  <p class="quote-txt">طعم مألوف، تجربة أسهل — ظرف واحد لكوب واحد كامل</p>
+  <p class="quote-txt">وصفة الجدة في ظرف أنيق — نكهة متوارثة بحلّة يومية حديثة</p>
   <div class="quote-by">◆ Jehair Natural Products ◆</div>
 </div>
 
@@ -652,7 +650,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         <span class="eyebrow">طريقة التحضير</span>
         <h2 class="sec-h">جاهز في<br>لحظات</h2>
         <div class="rule"></div>
-        <p class="sec-p">أسرع وأسهل من أي طريقة تقليدية</p>
+        <p class="sec-p">نفس النكهة الأصيلة، بخطوات أبسط وتغليف يومي عملي</p>
         <div class="how-steps">
           <div class="how-step"><div class="how-num">١</div><div><div class="how-h">افتح الظرف</div><div class="how-p">الجرعة المثالية جاهزة — بدون أي قياس</div></div></div>
           <div class="how-step"><div class="how-num">٢</div><div><div class="how-h">أضف ماء ساخن</div><div class="how-p">200 مل بدرجة حرارة مناسبة للشرب</div></div></div>
@@ -783,8 +781,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
     <span class="cta-logo-name">Jehair</span>
     <span class="cta-logo-sub">NATURAL PRODUCTS</span>
   </div>
-  <h2 class="cta-h">بوكس واحد، 10 أكواب،<br>وتحضير أسهل ليومك</h2>
-  <p class="cta-p">قهوة شعير فورية بلا كافيين — ظروف فردية بسعر واضح وتقديم أنيق</p>
+  <h2 class="cta-h">خلطة تراثية أصيلة،<br>في ظرف يومي أنيق</h2>
+  <p class="cta-p">خلطة شعير متوارثة بطابع خليجي مألوف — بلا كافيين، 10 ظروف فردية بسعر واضح</p>
   <div class="cta-price-box">
     <div class="cta-price-num">45 <sub>ر.س</sub></div>
     <div class="cta-price-detail">10 ظروف فردية · كل ظرف = كوب واحد</div>
