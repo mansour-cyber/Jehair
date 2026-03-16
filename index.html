@@ -42,27 +42,26 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);direction:
 .nav-wa:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(184,135,42,.35);}
 
 /* ── HERO ── */
-.hero{background:linear-gradient(150deg,var(--cream) 0%,var(--sand) 100%);overflow:hidden;}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:84vh;gap:0;}
-.hero-content{padding:64px 48px;max-width:580px;margin-left:auto;display:flex;flex-direction:column;justify-content:center;}
-.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);margin-bottom:18px;font-weight:600;background:rgba(184,144,42,.1);padding:6px 14px;border-radius:50px;border:1px solid rgba(184,144,42,.2);}
-.hero-h{font-family:var(--font-display);font-size:clamp(38px,6vw,68px);font-weight:800;color:var(--ink);line-height:1.15;margin-bottom:18px;letter-spacing:.04em;}
-.hero-h em{color:var(--gold);font-style:normal;letter-spacing:.06em;}
-.hero-p{font-size:16px;font-weight:400;color:var(--ink2);line-height:1.9;margin-bottom:28px;}
-.hero-social{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;padding:10px 16px;background:var(--pale);border:1px solid var(--bdr);border-radius:50px;}
+.hero{position:relative;overflow:hidden;min-height:84vh;}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:scaleX(-1);animation:heroZoom 14s ease-out forwards;}
+@keyframes heroZoom{from{transform:scaleX(-1) scale(1.06);}to{transform:scaleX(-1) scale(1);}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to left,rgba(8,3,1,.9) 0%,rgba(8,3,1,.62) 42%,rgba(8,3,1,.08) 100%);}
+.hero-inner{position:relative;z-index:2;max-width:var(--w);margin:0 auto;padding:0 48px;min-height:84vh;display:flex;align-items:center;}
+.hero-content{max-width:520px;padding:64px 0;}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold2);margin-bottom:18px;font-weight:600;background:rgba(200,160,40,.15);padding:6px 14px;border-radius:50px;border:1px solid rgba(200,160,40,.3);}
+.hero-h{font-family:var(--font-display);font-size:clamp(38px,6vw,68px);font-weight:800;color:#FEFAF5;line-height:1.15;margin-bottom:18px;letter-spacing:.04em;}
+.hero-h em{color:var(--gold2);font-style:normal;letter-spacing:.06em;}
+.hero-p{font-size:16px;font-weight:400;color:rgba(254,250,245,.82);line-height:1.9;margin-bottom:28px;}
+.hero-social{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;padding:10px 16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:50px;}
 .hero-social-stars{font-size:13px;}
-.hero-social-txt{font-size:13px;color:var(--ink2);font-weight:500;}
+.hero-social-txt{font-size:13px;color:rgba(254,250,245,.8);font-weight:500;}
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
-.hero-tag{font-size:12px;padding:6px 14px;border-radius:50px;border:1px solid var(--bdr);color:var(--ink2);background:var(--pale);}
+.hero-tag{font-size:12px;padding:6px 14px;border-radius:50px;border:1px solid rgba(255,255,255,.2);color:rgba(254,250,245,.8);background:rgba(255,255,255,.08);}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.hero-img-col{position:relative;overflow:hidden;}
-.hero-product-img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;animation:heroZoom 14s ease-out forwards;}
-@keyframes heroZoom{from{transform:scale(1.1);}to{transform:scale(1);}}
-.hero-badge{position:absolute;bottom:36px;left:24px;width:88px;height:88px;border-radius:50%;background:var(--gold2);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:11px;line-height:1.4;z-index:2;box-shadow:0 6px 20px rgba(200,160,40,.4);}
 .btn-primary{background:var(--gold2);color:var(--ink);font-family:var(--font);font-weight:800;font-size:15px;padding:15px 36px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:none;cursor:pointer;}
 .btn-primary:hover{background:var(--gold);transform:translateY(-2px);}
-.btn-outline{background:var(--pale);color:var(--ink);font-family:var(--font);font-weight:600;font-size:15px;padding:15px 28px;border-radius:50px;text-decoration:none;border:1.5px solid var(--bdr);transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
-.btn-outline:hover{background:var(--pale);}
+.btn-outline{background:rgba(255,255,255,.1);color:#FEFAF5;font-family:var(--font);font-weight:600;font-size:15px;padding:15px 28px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,.25);transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline:hover{background:rgba(255,255,255,.18);}
 
 /* ── TRUST BAR ── */
 .trust{background:var(--white);padding:18px 48px;}
@@ -278,11 +277,9 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 /* ── RESPONSIVE ── */
 @media(max-width:860px){
   .nav{padding:0 20px;}.nav-links{display:none;}
-  .hero-inner{grid-template-columns:1fr;min-height:auto;}
-  .hero-img-col{order:-1;height:320px;}
-  .hero-product-img{height:320px;}
-  .hero-badge{bottom:20px;left:16px;width:72px;height:72px;font-size:10px;}
-  .hero-content{padding:32px 20px 40px;max-width:100%;margin:0;}
+  .hero-inner{padding:0 20px;min-height:560px;}
+  .hero-content{padding:40px 0;max-width:100%;}
+  .hero-overlay{background:linear-gradient(to bottom,rgba(8,3,1,.5) 0%,rgba(8,3,1,.75) 100%);}
   .ing-layout,.how-layout{grid-template-columns:1fr;}
   .bens{grid-template-columns:1fr 1fr;}
   .policy-grid{grid-template-columns:1fr;}
@@ -330,6 +327,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <img src="IMG_0486.jpeg" class="hero-bg" alt="جهيّر قهوة الشعير الأصلية">
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-kicker">🌾 وصفة الجدة الأصلية</div>
@@ -348,10 +347,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         <a href="https://wa.me/+966555200445?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-primary">📲 اطلب الآن</a>
         <a href="#showcase" class="btn-outline">شوف المنتج</a>
       </div>
-    </div>
-    <div class="hero-img-col">
-      <img src="IMG_0457.png" class="hero-product-img" alt="جهيّر قهوة الشعير">
-      <div class="hero-badge">وصفة<br>الجدّة</div>
     </div>
   </div>
 </section>
