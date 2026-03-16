@@ -6,7 +6,7 @@
 <title>جهيّر — قهوة الشعير الفورية</title>
 <meta property="og:title" content="جهيّر — قهوة الشعير الفورية">
 <meta property="og:description" content="قهوة شعير فورية بلا كافيين — ظروف فردية لكوب واحد. 10 ظروف بـ 45 ريال، شحن مجاني فوق 200 ريال.">
-<meta property="og:image" content="IMG_0486.jpeg">
+<meta property="og:image" content="IMG_0495.jpeg">
 <meta property="og:type" content="website">
 <meta name="description" content="جهيّر قهوة شعير فورية بلا كافيين — ظروف فردية مصممة للكوب الواحد، لروتين يومي أسرع وأسهل. اطلب عبر واتساب.">
 <style>
@@ -42,8 +42,8 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);direction:
 
 /* ── HERO ── */
 .hero{position:relative;overflow:hidden;min-height:84vh;}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:scaleX(-1);animation:heroZoom 14s ease-out forwards;}
-@keyframes heroZoom{from{transform:scaleX(-1) scale(1.06);}to{transform:scaleX(-1) scale(1);}}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;animation:heroZoom 14s ease-out forwards;}
+@keyframes heroZoom{from{transform:scale(1.06);}to{transform:scale(1);}}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to left,rgba(8,3,1,.9) 0%,rgba(8,3,1,.62) 42%,rgba(8,3,1,.08) 100%);}
 .hero-inner{position:relative;z-index:2;max-width:var(--w);margin:0 auto;padding:0 48px;min-height:84vh;display:flex;align-items:center;}
 .hero-content{max-width:520px;padding:64px 0;}
@@ -99,6 +99,25 @@ body{font-family:var(--font);background:var(--white);color:var(--ink);direction:
 .prob-ico{font-size:28px;margin-bottom:12px;display:block;}
 .prob-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;}
 .prob-p{font-size:13px;color:var(--ink2);line-height:1.7;text-align:center;}
+
+/* ── PROBLEM WITH IMAGE ── */
+.prob-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-top:36px;}
+.prob-img{width:100%;min-height:420px;object-fit:cover;object-position:center;display:block;border-radius:20px;box-shadow:0 12px 40px rgba(44,26,6,.10);}
+.prob-cards-col{display:flex;flex-direction:column;gap:12px;}
+.prob-card-v{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:var(--white);border:1.5px solid var(--bdr);border-radius:14px;transition:all .2s;}
+.prob-card-v:hover{border-color:rgba(184,135,42,.2);}
+.prob-ico-v{font-size:20px;flex-shrink:0;margin-top:2px;}
+.prob-h-v{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.prob-p-v{font-size:13px;color:var(--ink2);line-height:1.6;}
+.prob-answer{padding:16px 18px;background:var(--pale);border:1.5px solid rgba(184,135,42,.25);border-radius:14px;margin-top:4px;}
+.prob-answer-tag{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+.prob-answer-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.prob-answer-p{font-size:13px;color:var(--ink2);line-height:1.6;}
+
+/* ── LIFESTYLE / BENEFITS LAYOUT ── */
+.lifestyle-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+.bens-in-layout{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.lifestyle-img{width:100%;height:560px;object-fit:cover;object-position:center;display:block;border-radius:20px;box-shadow:0 12px 40px rgba(44,26,6,.10);}
 
 /* ── SOLUTION CARDS ── */
 .sol-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
@@ -277,6 +296,11 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   .policy-grid{grid-template-columns:1fr;}
   .reviews-grid{grid-template-columns:1fr;}
   .problem-grid{grid-template-columns:1fr 1fr;}
+  .prob-layout{grid-template-columns:1fr;}
+  .prob-img{min-height:260px;height:280px;}
+  .lifestyle-layout{grid-template-columns:1fr;}
+  .lifestyle-img{height:280px;object-position:center;}
+  .bens-in-layout{grid-template-columns:1fr 1fr;}
   .sol-cards{grid-template-columns:1fr;}
   .inner{padding:0 20px;}.sec{padding:60px 0;}
   .trust{padding:14px 16px;}
@@ -288,6 +312,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 }
 @media(max-width:520px){
   .bens{grid-template-columns:1fr;}
+  .bens-in-layout{grid-template-columns:1fr;}
+  .lifestyle-img{height:240px;}
   .problem-grid{grid-template-columns:1fr;}
   .hero-h{font-size:34px;line-height:1.15;}
   .reviews-grid{grid-template-columns:1fr;}
@@ -322,7 +348,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <img src="IMG_0486.jpeg" class="hero-bg" alt="جهيّر قهوة الشعير الفورية" loading="eager">
+  <img src="IMG_0495.jpeg" class="hero-bg" alt="جهيّر قهوة الشعير الفورية" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
@@ -366,21 +392,39 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
       <div class="rule cx"></div>
       <p class="sec-p mx">كثير من منتجات الشعير تُباع بعبوات كبيرة تحتاج قياسًا وتحضيرًا تقليديًا — مناسب أحيانًا، لكنه ليس دائمًا الأسهل لروتين مشغول</p>
     </div>
-    <div class="problem-grid">
-      <div class="prob-card">
-        <span class="prob-ico">🫙</span>
-        <div class="prob-h">عبوات كبيرة</div>
-        <p class="prob-p">كميات أكثر من احتياجك في كل تحضير</p>
+    <div class="prob-layout">
+      <!-- RTL: first child = RIGHT col (cards), second child = LEFT col (image) -->
+      <div class="prob-cards-col">
+        <div class="prob-card-v">
+          <span class="prob-ico-v">🫙</span>
+          <div>
+            <div class="prob-h-v">عبوات كبيرة</div>
+            <p class="prob-p-v">كميات أكثر من احتياجك في كل تحضير</p>
+          </div>
+        </div>
+        <div class="prob-card-v">
+          <span class="prob-ico-v">⚖️</span>
+          <div>
+            <div class="prob-h-v">قياس متكرر</div>
+            <p class="prob-p-v">وقت إضافي مع كل كوب — يوم بعد يوم</p>
+          </div>
+        </div>
+        <div class="prob-card-v">
+          <span class="prob-ico-v">🔄</span>
+          <div>
+            <div class="prob-h-v">تحضير تقليدي</div>
+            <p class="prob-p-v">خطوات أكثر مما يحتاجه روتين يومي سريع</p>
+          </div>
+        </div>
+        <div class="prob-answer">
+          <div class="prob-answer-tag">جهيّر</div>
+          <div class="prob-answer-h">ظرف واحد = كوب واحد — بدون قياس</div>
+          <p class="prob-answer-p">تجربة أوضح وأسهل، مصممة للاستخدام اليومي</p>
+        </div>
       </div>
-      <div class="prob-card">
-        <span class="prob-ico">⚖️</span>
-        <div class="prob-h">قياس متكرر</div>
-        <p class="prob-p">وقت إضافي مع كل كوب — يوم بعد يوم</p>
-      </div>
-      <div class="prob-card">
-        <span class="prob-ico">🔄</span>
-        <div class="prob-h">تحضير تقليدي</div>
-        <p class="prob-p">خطوات أكثر مما يحتاجه روتين يومي سريع</p>
+      <!-- Image: shows the contrast between bulk barley and the Jehair sachet -->
+      <div>
+        <img src="IMG_0496.jpeg" class="prob-img" alt="مقارنة قهوة الشعير التقليدية مع جهيّر" loading="lazy">
       </div>
     </div>
   </div>
@@ -420,7 +464,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 <!-- PRODUCT SHOWCASE -->
 <section class="showcase" id="showcase">
   <div class="showcase-img-wrap">
-    <img src="box2.jpg" class="showcase-img" alt="جهيّر — بوكس 10 ظروف فردية" loading="lazy">
+    <img src="IMG_0497.jpeg" class="showcase-img" alt="جهيّر — بوكس 10 ظروف فردية" loading="lazy">
   </div>
   <div class="showcase-content">
     <div class="showcase-kicker">🌾 قهوة شعير فورية · بلا كافيين</div>
@@ -552,22 +596,29 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 </section>
 
 
-<!-- BENEFITS -->
+<!-- BENEFITS / LIFESTYLE -->
 <section class="sec">
   <div class="inner">
     <div class="center">
       <span class="eyebrow">لماذا هذا الشكل؟</span>
       <h2 class="sec-h">ليش يناسب روتينك اليومي؟</h2>
       <div class="rule cx"></div>
-      <p class="sec-p mx">شكل مختلف يصنع تجربة أسهل</p>
+      <p class="sec-p mx">شكل مختلف يصنع تجربة أسهل — في المكتب، المنزل، أو أثناء التنقل</p>
     </div>
-    <div class="bens">
-      <div class="ben"><span class="ben-ico">☕</span><div class="ben-h">بلا كافيين</div><p class="ben-p">بديل يومي مناسب لمن يفضل تجنب الكافيين في روتينه</p></div>
-      <div class="ben"><span class="ben-ico">🎯</span><div class="ben-h">جرعة مضبوطة</div><p class="ben-p">كل ظرف لكوب واحد — لا قياس ولا تخمين في كل مرة</p></div>
-      <div class="ben"><span class="ben-ico">⚡</span><div class="ben-h">تحضير سريع</div><p class="ben-p">ظرف + ماء ساخن + تحريك — جاهز خلال لحظات</p></div>
-      <div class="ben"><span class="ben-ico">🎒</span><div class="ben-h">سهل الحمل</div><p class="ben-p">تغليف فردي خفيف مناسب للعمل والسفر والمنزل</p></div>
-      <div class="ben"><span class="ben-ico">✨</span><div class="ben-h">تقديم أنيق</div><p class="ben-p">ظروف بتصميم عصري — يصلح هدية ويناسب الاستخدام اليومي</p></div>
-      <div class="ben"><span class="ben-ico">🌿</span><div class="ben-h">مكوّنات طبيعية</div><p class="ben-p">ستة مكوّنات طبيعية مختارة بعناية، بلا إضافات صناعية</p></div>
+    <div class="lifestyle-layout">
+      <!-- RTL: first child = RIGHT col (benefit cards), second child = LEFT col (lifestyle image) -->
+      <div class="bens-in-layout">
+        <div class="ben"><span class="ben-ico">☕</span><div class="ben-h">بلا كافيين</div><p class="ben-p">بديل يومي مناسب لمن يفضل تجنب الكافيين في روتينه</p></div>
+        <div class="ben"><span class="ben-ico">🎯</span><div class="ben-h">جرعة مضبوطة</div><p class="ben-p">كل ظرف لكوب واحد — لا قياس ولا تخمين في كل مرة</p></div>
+        <div class="ben"><span class="ben-ico">⚡</span><div class="ben-h">تحضير سريع</div><p class="ben-p">ظرف + ماء ساخن + تحريك — جاهز خلال لحظات</p></div>
+        <div class="ben"><span class="ben-ico">🎒</span><div class="ben-h">سهل الحمل</div><p class="ben-p">تغليف فردي خفيف مناسب للعمل والسفر والمنزل</p></div>
+        <div class="ben"><span class="ben-ico">✨</span><div class="ben-h">تقديم أنيق</div><p class="ben-p">ظروف بتصميم عصري — يصلح هدية ويناسب الاستخدام اليومي</p></div>
+        <div class="ben"><span class="ben-ico">🌿</span><div class="ben-h">مكوّنات طبيعية</div><p class="ben-p">ستة مكوّنات طبيعية مختارة بعناية، بلا إضافات صناعية</p></div>
+      </div>
+      <!-- Lifestyle image: desk/work setting communicating daily routine fit -->
+      <div>
+        <img src="IMG_0498.jpeg" class="lifestyle-img" alt="جهيّر — يناسب روتينك اليومي" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -609,7 +660,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
           <div class="how-step"><div class="how-num">٤</div><div><div class="how-h">استمتع 🍵</div><div class="how-p">أضف عسلًا أو حليبًا حسب رغبتك</div></div></div>
         </div>
       </div>
-      <div><img src="how.jpg" class="how-photo" alt="طريقة تحضير جهيّر" loading="lazy"></div>
+      <div><img src="IMG_0494.jpeg" class="how-photo" alt="طريقة تحضير جهيّر — ظرف واحد لكوب واحد" loading="lazy"></div>
     </div>
   </div>
 </section>
