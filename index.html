@@ -90,33 +90,7 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .urgency-strip p{font-size:13px;color:var(--ink2);}
 .urgency-strip strong{color:var(--gold);}
 
-/* ── PRODUCTS ── */
-.products{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
-.pcard{background:var(--white);border:1.5px solid var(--bdr);border-radius:24px;overflow:hidden;transition:box-shadow .3s,transform .3s;}
-.pcard:hover{box-shadow:0 16px 48px rgba(44,26,6,.12);transform:translateY(-4px);}
-.pcard.featured{border-color:rgba(184,135,42,.35);box-shadow:0 4px 20px rgba(184,135,42,.12);}
-.pcard-photo{height:300px;overflow:hidden;position:relative;}
-.pcard-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
-.pcard:hover .pcard-photo img{transform:scale(1.04);}
-.pcard-badge{position:absolute;top:14px;right:14px;font-size:11px;font-weight:700;padding:6px 14px;border-radius:50px;letter-spacing:.5px;}
-.badge-neutral{background:rgba(255,255,255,.88);color:var(--ink);border:1px solid var(--bdr);}
-.badge-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);}
-.pcard-urgency{background:linear-gradient(135deg,#FEF3D8,#FDE8B4);border-bottom:1px solid rgba(184,135,42,.2);padding:8px 18px;display:flex;align-items:center;gap:8px;}
-.pcard-urgency-txt{font-size:12px;font-weight:700;color:var(--gold);}
-.pcard-body{padding:24px 28px 30px;}
-.pcard-tag{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:block;}
-.pcard-name{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--ink);line-height:1.2;margin-bottom:8px;}
-.pcard-desc{font-size:14px;font-weight:400;color:var(--ink2);line-height:1.8;margin-bottom:16px;text-align:right;}
-.pcard-specs{background:var(--sand);border-radius:12px;padding:14px 16px;margin-bottom:18px;display:flex;flex-direction:column;gap:6px;}
-.spec-row{display:flex;justify-content:space-between;}
-.spec-l{font-size:13px;font-weight:300;color:var(--ink2);}
-.spec-r{font-size:13px;font-weight:700;color:var(--ink);}
-.pcard-price-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
-.pcard-price-was{font-size:13px;color:var(--ink2);opacity:.55;text-decoration:line-through;margin-bottom:2px;}
-.pcard-price{font-family:var(--font-display);font-size:36px;font-weight:800;color:var(--ink);line-height:1;}
-.pcard-price sub{font-size:15px;color:var(--ink2);font-weight:300;}
-.pcard-per{font-size:12px;color:var(--gold);font-weight:700;margin-top:3px;}
-.pcard-note{font-size:12px;color:var(--ink2);font-weight:400;background:var(--pale);padding:4px 10px;border-radius:20px;}
+/* ── BTN-WA (mid-cta) ── */
 .btn-wa{width:100%;padding:15px;border-radius:50px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:var(--font);font-weight:800;font-size:15px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;text-decoration:none;box-shadow:0 4px 16px rgba(184,135,42,.3);}
 .btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(184,135,42,.45);}
 
@@ -293,7 +267,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   .hero-overlay{background:linear-gradient(to top,rgba(44,26,6,.96) 35%,rgba(44,26,6,.4) 100%);}
   .hero-inner{padding:0 24px;align-items:flex-end;min-height:92vh;}
   .hero-content{padding:32px 0 72px;max-width:100%;}
-  .products{grid-template-columns:1fr;}
   .ing-layout,.how-layout{grid-template-columns:1fr;}
   .bens{grid-template-columns:1fr 1fr;}
   .policy-grid{grid-template-columns:1fr;}
@@ -332,7 +305,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
     </div>
   </a>
   <div class="nav-links">
-    <a href="#products" class="nav-link">المنتجات</a>
     <a href="#ingredients" class="nav-link">المكوّنات</a>
     <a href="#how" class="nav-link">التحضير</a>
     <a href="#reviews" class="nav-link">آراء العملاء</a>
@@ -361,7 +333,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
       </div>
       <div class="hero-btns">
         <a href="https://wa.me/+966555200445?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-primary">📲 اطلب الآن</a>
-        <a href="#products" class="btn-outline">شوف المنتجات</a>
+        <a href="#ingredients" class="btn-outline">اكتشف المكوّنات</a>
       </div>
     </div>
   </div>
@@ -430,82 +402,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   </div>
 </section>
 
-<!-- PRODUCTS -->
-<section class="sec" id="products">
-  <div class="inner">
-    <div class="center">
-      <span class="eyebrow">اختر مقاسك</span>
-      <h2 class="sec-h">بوكسات قهوة الشعير</h2>
-      <div class="rule cx"></div>
-      <p class="sec-p mx">ظروف فردية مصمّمة بعناية — كل ظرف جرعة كاملة مثالية، سهلة الحمل وجميلة كهدية</p>
-    </div>
-    <div class="products">
-
-      <!-- PRODUCT 1 -->
-      <div class="pcard">
-        <div class="pcard-photo">
-          <img src="box1b.jpg" alt="بوكس 12 ظرف">
-          <div class="pcard-badge badge-neutral">12 ظرف</div>
-        </div>
-        <div class="pcard-urgency">
-          <span>🎁</span>
-          <span class="pcard-urgency-txt">مثالي للهدايا والرحلات العائلية &nbsp;·&nbsp; تبقّى <strong>9 بوكسات</strong></span>
-        </div>
-        <div class="pcard-body">
-          <span class="pcard-tag">بوكس الترمس</span>
-          <div class="pcard-name">بوكس الترمس<br>12 ظرف</div>
-          <p class="pcard-desc">مثالي للعائلة والرحلات — كل ظرف يكفي لترمس كامل بحجم لتر واحد.</p>
-          <div class="pcard-specs">
-            <div class="spec-row"><span class="spec-l">عدد الظروف</span><span class="spec-r">12 ظرف</span></div>
-            <div class="spec-row"><span class="spec-l">حجم كل ظرف</span><span class="spec-r">يكفي لتر كامل</span></div>
-            <div class="spec-row"><span class="spec-l">مناسب لـ</span><span class="spec-r">الترمس والدلة</span></div>
-          </div>
-          <div class="pcard-price-row">
-            <div>
-              <div class="pcard-price-was">110 ر.س</div>
-              <div class="pcard-price">89 <sub>ر.س</sub></div>
-              <div class="pcard-per">7.4 ريال للظرف فقط</div>
-            </div>
-            <div class="pcard-note">🎁 مثالي كهدية</div>
-          </div>
-          <a href="https://wa.me/+966555200445?text=أريد طلب بوكس الترمس 12 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 2 (Featured) -->
-      <div class="pcard featured">
-        <div class="pcard-photo">
-          <img src="box2.jpg" alt="بوكس 30 ظرف" style="object-position:center top;">
-          <div class="pcard-badge badge-gold">⭐ الأكثر طلباً</div>
-        </div>
-        <div class="pcard-urgency">
-          <span>🔥</span>
-          <span class="pcard-urgency-txt">الكميات محدودة — تبقّى <strong>5 بوكسات</strong> فقط</span>
-        </div>
-        <div class="pcard-body">
-          <span class="pcard-tag">بوكس الكوب اليومي</span>
-          <div class="pcard-name">بوكس الكوب<br>30 ظرف</div>
-          <p class="pcard-desc">للاستخدام اليومي — شهر كامل من الصحة. كوب 200 مل في كل ظرف.</p>
-          <div class="pcard-specs">
-            <div class="spec-row"><span class="spec-l">عدد الظروف</span><span class="spec-r">30 ظرف</span></div>
-            <div class="spec-row"><span class="spec-l">حجم كل ظرف</span><span class="spec-r">كوب 200 مل</span></div>
-            <div class="spec-row"><span class="spec-l">المدة</span><span class="spec-r">شهر كامل يومياً</span></div>
-          </div>
-          <div class="pcard-price-row">
-            <div>
-              <div class="pcard-price-was">145 ر.س</div>
-              <div class="pcard-price">115 <sub>ر.س</sub></div>
-              <div class="pcard-per">3.8 ريال للكوب فقط</div>
-            </div>
-            <div class="pcard-note">💎 أفضل قيمة</div>
-          </div>
-          <a href="https://wa.me/+966555200445?text=أريد طلب بوكس الكوب 30 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- WHY JEHAIR — COMPARISON TABLE -->
 <section class="sec tinted">
