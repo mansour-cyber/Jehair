@@ -66,11 +66,13 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 
 /* ── TRUST BAR ── */
 .trust{background:var(--white);border-bottom:1px solid var(--bdr);padding:18px 48px;}
-.trust-row{max-width:var(--w);margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:10px;}
-.trust-item{display:inline-flex;align-items:center;gap:7px;background:var(--pale);border:1px solid var(--bdr);padding:7px 16px;border-radius:50px;}
-.t-ico{font-size:15px;}
-.t-txt{font-size:12px;color:var(--ink);font-weight:600;}
+.trust-row{max-width:var(--w);margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--pale);border:1px solid var(--bdr);padding:10px 12px;border-radius:50px;text-align:center;}
+.t-ico{font-size:16px;flex-shrink:0;}
+.t-txt{font-size:12px;color:var(--ink);font-weight:600;line-height:1.4;}
 .t-txt strong{color:var(--gold);}
+@media(max-width:860px){.trust-row{grid-template-columns:repeat(3,1fr);}.trust{padding:14px 16px;}}
+@media(max-width:520px){.trust-row{grid-template-columns:repeat(2,1fr);}}
 
 
 /* ── SECTIONS ── */
