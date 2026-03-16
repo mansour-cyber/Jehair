@@ -71,11 +71,6 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .t-txt{font-size:13px;color:var(--ink2);font-weight:500;}
 .t-txt strong{color:var(--ink);}
 
-/* ── MOSAIC ── */
-.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:320px 260px;gap:3px;background:var(--latte);}
-.mosaic-a,.mosaic-b,.mosaic-c,.mosaic-d{overflow:hidden;}
-.mosaic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;}
-.mosaic>div:hover img{transform:scale(1.04);}
 
 /* ── SECTIONS ── */
 .sec{padding:84px 0;}
@@ -293,10 +288,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   .hero-overlay{background:linear-gradient(to top,rgba(44,26,6,.96) 35%,rgba(44,26,6,.4) 100%);}
   .hero-inner{padding:0 24px;align-items:flex-end;min-height:92vh;}
   .hero-content{padding:32px 0 72px;max-width:100%;}
-  .mosaic{grid-template-columns:1fr;grid-template-rows:420px;}
-  .mosaic-a,.mosaic-b,.mosaic-c{display:none;}
-  .mosaic-d img{object-position:center center;animation:zoomIn 1.2s ease forwards;}
-@keyframes zoomIn{from{transform:scale(1.08);}to{transform:scale(1);}}
   .products{grid-template-columns:1fr;}
   .ing-layout,.how-layout{grid-template-columns:1fr;}
   .bens{grid-template-columns:1fr 1fr;}
@@ -315,7 +306,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   .bens{grid-template-columns:1fr;}
   .hero-h{font-size:34px;line-height:1.15;}
   .reviews-grid{grid-template-columns:1fr;}
-  .mosaic{grid-template-rows:240px 220px;}
 }
 </style>
 <script>if('scrollRestoration' in history)history.scrollRestoration='manual';window.scrollTo(0,0);</script>
@@ -384,13 +374,6 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   </div>
 </div>
 
-<!-- MOSAIC -->
-<div class="mosaic">
-  <div class="mosaic-a"><img src="IMG_0457.png" alt="قهوة الشعير جهيّر" style="object-position:center top;"></div>
-  <div class="mosaic-b"><img src="hero2.jpg" alt="قهوة الشعير"></div>
-  <div class="mosaic-c"><img src="box1b.jpg" alt="بوكس الترمس" style="object-position:center top;"></div>
-  <div class="mosaic-d"><img src="box2.jpg" alt="بوكس الكوب"></div>
-</div>
 
 <!-- PRODUCT SHOWCASE -->
 <section class="showcase" id="showcase">
