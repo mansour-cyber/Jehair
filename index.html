@@ -178,15 +178,20 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .showcase-point-p{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.6;}
 .showcase-cta{display:flex;flex-direction:column;gap:12px;}
 .showcase-price-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
-.showcase-price-badge{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-weight:800;font-size:13px;padding:6px 16px;border-radius:50px;}
-.showcase-price-was{font-size:13px;color:var(--ink2);text-decoration:line-through;opacity:.5;}
-.showcase-price-main{font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--ink);line-height:1;}
-.showcase-price-main sub{font-size:16px;font-weight:400;color:var(--ink2);}
-.showcase-price-per{font-size:12px;color:var(--gold);font-weight:700;margin-top:2px;}
-.showcase-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;font-family:var(--font);font-weight:700;font-size:15px;padding:16px 36px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(60,34,16,.25);}
-.showcase-btn:hover{background:var(--ink2);transform:translateY(-2px);box-shadow:0 10px 32px rgba(60,34,16,.3);}
-.showcase-stock{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink2);}
-.showcase-stock-dot{width:7px;height:7px;background:#C8A028;border-radius:50%;animation:pulse 1.8s ease-in-out infinite;}
+.showcase-pain{background:rgba(220,38,38,.07);border:1px solid rgba(220,38,38,.15);border-radius:12px;padding:14px 18px;margin-bottom:20px;}
+.showcase-pain-q{font-size:15px;font-weight:700;color:#b91c1c;margin-bottom:4px;}
+.showcase-pain-a{font-size:13px;color:var(--ink2);line-height:1.7;}
+.showcase-price-block{background:var(--white);border:1.5px solid var(--bdr);border-radius:16px;padding:20px 22px;margin-bottom:16px;}
+.showcase-price-badge{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-weight:800;font-size:12px;padding:5px 14px;border-radius:50px;display:inline-block;margin-bottom:12px;}
+.showcase-price-was{font-size:18px;font-weight:700;color:#dc2626;text-decoration:line-through;margin-bottom:4px;}
+.showcase-price-main{font-family:var(--font-display);font-size:56px;font-weight:800;color:#16a34a;line-height:1;}
+.showcase-price-main sub{font-size:18px;font-weight:600;color:#16a34a;}
+.showcase-price-per{font-size:13px;color:var(--ink2);font-weight:600;margin-top:6px;}
+.showcase-btn{display:flex;align-items:center;justify-content:center;gap:12px;background:#16a34a;color:#fff;font-family:var(--font);font-weight:800;font-size:17px;padding:18px 36px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 8px 28px rgba(22,163,74,.4);width:100%;}
+.showcase-btn:hover{background:#15803d;transform:translateY(-2px);box-shadow:0 12px 36px rgba(22,163,74,.5);}
+.showcase-btn-sub{font-size:12px;opacity:.8;font-weight:400;}
+.showcase-stock{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2);margin-top:10px;justify-content:center;}
+.showcase-stock-dot{width:8px;height:8px;background:#dc2626;border-radius:50%;animation:pulse 1.8s ease-in-out infinite;flex-shrink:0;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
 @media(max-width:860px){
   .showcase{grid-template-columns:1fr;min-height:auto;}
@@ -382,37 +387,44 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
     <div class="showcase-img-overlay"></div>
   </div>
   <div class="showcase-content">
-    <div class="showcase-kicker">⭐ الأكثر طلباً</div>
-    <h2 class="showcase-h">قهوة شعير<br>طبيعية</h2>
-    <p class="showcase-sub">بديل يومي لطيف للقهوة — نكهة خليجية أصيلة بلا كافيين</p>
+    <div class="showcase-kicker">⭐ الأكثر طلباً · +500 عميل راضٍ</div>
+    <h2 class="showcase-h">توقّف عن<br>الكافيين اليومي</h2>
     <div class="showcase-divider"></div>
+
+    <div class="showcase-pain">
+      <div class="showcase-pain-q">😩 قهوتك تأثّر على نومك وضغطك وهضمك؟</div>
+      <div class="showcase-pain-a">جهيّر بديل طبيعي أصيل — نفس الدفء والنكهة الخليجية، بدون كافيين وبدون آثار جانبية.</div>
+    </div>
+
     <div class="showcase-points">
       <div class="showcase-point">
-        <div class="showcase-point-ico">🌾</div>
-        <div><div class="showcase-point-h">ستة مكوّنات طبيعية نقية</div><div class="showcase-point-p">شعير · كركم · زعفران · هيل · زنجبيل · عصفر</div></div>
+        <div class="showcase-point-ico">😴</div>
+        <div><div class="showcase-point-h">نوم هادئ بعد كل كوب</div><div class="showcase-point-p">بلا أرق · بلا قلق · بلا خفقان</div></div>
+      </div>
+      <div class="showcase-point">
+        <div class="showcase-point-ico">🌿</div>
+        <div><div class="showcase-point-h">6 مكوّنات طبيعية نقية</div><div class="showcase-point-p">شعير · كركم · زعفران · هيل · زنجبيل · عصفر</div></div>
       </div>
       <div class="showcase-point">
         <div class="showcase-point-ico">⚡</div>
-        <div><div class="showcase-point-h">طاقة بلا كافيين</div><div class="showcase-point-p">نشاط طبيعي طوال اليوم — ينام هادئاً في الليل</div></div>
-      </div>
-      <div class="showcase-point">
-        <div class="showcase-point-ico">✨</div>
-        <div><div class="showcase-point-h">ظروف فردية أنيقة</div><div class="showcase-point-p">تحضير في 30 ثانية — جرعة مثالية في كل ظرف</div></div>
+        <div><div class="showcase-point-h">طاقة حقيقية طوال اليوم</div><div class="showcase-point-p">تحضير في 30 ثانية — جرعة مثالية في كل ظرف</div></div>
       </div>
     </div>
+
     <div class="showcase-cta">
-      <div class="showcase-price-row">
-        <div>
-          <div class="showcase-price-was">145 ر.س</div>
-          <div class="showcase-price-main">115 <sub>ر.س</sub></div>
-          <div class="showcase-price-per">3.8 ريال للكوب فقط · 30 ظرف</div>
-        </div>
-        <div class="showcase-price-badge">وفّر 30 ر.س</div>
+      <div class="showcase-price-block">
+        <div class="showcase-price-badge">وفّر 30 ر.س الآن</div>
+        <div class="showcase-price-was">كان: 145 ر.س</div>
+        <div class="showcase-price-main">115 <sub>ر.س</sub></div>
+        <div class="showcase-price-per">فقط 3.8 ريال للكوب · 30 ظرف · شهر كامل</div>
       </div>
-      <a href="https://wa.me/+966555200445?text=أريد طلب بوكس الكوب 30 ظرف" class="showcase-btn">📲 اطلب الآن عبر واتساب</a>
+      <a href="https://wa.me/+966555200445?text=أريد طلب بوكس الكوب 30 ظرف" class="showcase-btn">
+        📲 اطلب الآن عبر واتساب
+        <span class="showcase-btn-sub">· ردّ فوري</span>
+      </a>
       <div class="showcase-stock">
         <span class="showcase-stock-dot"></span>
-        تبقّى <strong>5 بوكسات</strong> فقط من هذا الحجم
+        تبقّى <strong>5 بوكسات فقط</strong> — الكميات محدودة
       </div>
     </div>
   </div>
