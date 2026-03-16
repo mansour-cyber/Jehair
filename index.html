@@ -114,6 +114,7 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .spec-l{font-size:13px;font-weight:300;color:var(--ink2);}
 .spec-r{font-size:13px;font-weight:700;color:var(--ink);}
 .pcard-price-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
+.pcard-price-was{font-size:13px;color:var(--ink2);opacity:.55;text-decoration:line-through;margin-bottom:2px;}
 .pcard-price{font-family:var(--font-display);font-size:36px;font-weight:800;color:var(--ink);line-height:1;}
 .pcard-price sub{font-size:15px;color:var(--ink2);font-weight:300;}
 .pcard-per{font-size:12px;color:var(--gold);font-weight:700;margin-top:3px;}
@@ -160,6 +161,14 @@ body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:
 .how-num{width:42px;height:42px;min-width:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;font-weight:800;flex-shrink:0;}
 .how-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
 .how-p{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.7;text-align:right;}
+
+/* ── MID-PAGE CTA ── */
+.mid-cta{background:var(--ink);padding:36px 48px;}
+.mid-cta-inner{max-width:var(--w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.mid-cta-h{font-family:var(--font-display);font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;}
+.mid-cta-p{font-size:14px;color:rgba(255,255,255,.55);font-weight:400;}
+.mid-cta-btn{width:auto;padding:14px 36px;white-space:nowrap;}
+@media(max-width:860px){.mid-cta{padding:28px 20px;}.mid-cta-inner{flex-direction:column;text-align:center;}.mid-cta-btn{width:100%;}}
 
 /* ── QUOTE (light version) ── */
 .quote-sec{background:linear-gradient(135deg,var(--pale),var(--latte));padding:72px 48px;text-align:center;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);}
@@ -301,8 +310,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         <span class="hero-tag">✨ ظروف فردية</span>
       </div>
       <div class="hero-btns">
-        <a href="#products" class="btn-primary">🛍️ اطلب الآن</a>
-        <a href="#ingredients" class="btn-outline">اكتشف المكوّنات</a>
+        <a href="https://wa.me/+966555200445?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-primary">📲 اطلب الآن</a>
+        <a href="#products" class="btn-outline">شوف المنتجات</a>
       </div>
     </div>
   </div>
@@ -346,7 +355,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         </div>
         <div class="pcard-urgency">
           <span>🎁</span>
-          <span class="pcard-urgency-txt">مثالي للهدايا والرحلات العائلية</span>
+          <span class="pcard-urgency-txt">مثالي للهدايا والرحلات العائلية &nbsp;·&nbsp; تبقّى <strong>9 بوكسات</strong></span>
         </div>
         <div class="pcard-body">
           <span class="pcard-tag">بوكس الترمس</span>
@@ -359,6 +368,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
           </div>
           <div class="pcard-price-row">
             <div>
+              <div class="pcard-price-was">110 ر.س</div>
               <div class="pcard-price">89 <sub>ر.س</sub></div>
               <div class="pcard-per">7.4 ريال للظرف فقط</div>
             </div>
@@ -376,7 +386,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         </div>
         <div class="pcard-urgency">
           <span>🔥</span>
-          <span class="pcard-urgency-txt">الكميات محدودة — اطلب الآن قبل النفاذ</span>
+          <span class="pcard-urgency-txt">الكميات محدودة — تبقّى <strong>5 بوكسات</strong> فقط</span>
         </div>
         <div class="pcard-body">
           <span class="pcard-tag">بوكس الكوب اليومي</span>
@@ -389,6 +399,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
           </div>
           <div class="pcard-price-row">
             <div>
+              <div class="pcard-price-was">145 ر.س</div>
               <div class="pcard-price">115 <sub>ر.س</sub></div>
               <div class="pcard-per">3.8 ريال للكوب فقط</div>
             </div>
@@ -474,6 +485,17 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
     </div>
   </div>
 </section>
+
+<!-- MID-PAGE CTA -->
+<div class="mid-cta">
+  <div class="mid-cta-inner">
+    <div class="mid-cta-txt">
+      <div class="mid-cta-h">مستعد تجرّب؟</div>
+      <div class="mid-cta-p">تحضير في 30 ثانية · شحن لجميع مناطق المملكة</div>
+    </div>
+    <a href="https://wa.me/+966555200445?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-wa mid-cta-btn">📲 اطلب الآن عبر واتساب</a>
+  </div>
+</div>
 
 <!-- QUOTE -->
 <div class="quote-sec">
