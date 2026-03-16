@@ -6,19 +6,22 @@
 <title>جهيّر — قهوة الشعير الأصلية</title>
 <meta property="og:title" content="جهيّر — قهوة الشعير الأصلية">
 <meta property="og:description" content="وصفة الوالدة في ظروف أنيقة — ستة مكوّنات طبيعية، بلا كافيين، سريعة التحضير. بوكس 12 ظرف بـ 89 ريال.">
-<meta property="og:image" content="hero.jpg">
+<meta property="og:image" content="product.jpg">
 <meta property="og:type" content="website">
 <meta name="description" content="قهوة الشعير الأصلية من جهيّر — مشروب طبيعي بلا كافيين بستة مكوّنات أصيلة. اطلب عبر واتساب.">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 :root{
-  --ink:#2C1A06;--ink2:#7A5230;--gold:#B8872A;--gold2:#D4A030;
-  --cream:#FFFFFF;--sand:#FDF6EC;--pale:#F7ECD9;--latte:#EDD9B8;
-  --white:#FFFFFF;--bdr:rgba(44,26,6,.10);--r:16px;--w:1040px;
+  /* ألوان مستخرجة من صورة المنتج */
+  --ink:#3C2210;--ink2:#7A5C35;--gold:#B8902A;--gold2:#C8A028;
+  --cream:#FEFAF5;--sand:#F5E8D2;--pale:#EDD8BC;--latte:#D8C4A0;
+  --box:#C4AE8A;--warm:#F0E2CC;
+  --white:#FFFFFF;--bdr:rgba(60,34,16,.09);--r:16px;--w:1040px;
+  --font:-apple-system,BlinkMacSystemFont,'SF Arabic','SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  --font-display:-apple-system,BlinkMacSystemFont,'SF Arabic Rounded','SF Pro Rounded','SF Pro Display','Helvetica Neue',Arial,sans-serif;
 }
-body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);direction:rtl;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{font-family:var(--font);background:var(--cream);color:var(--ink);direction:rtl;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;text-align:right;}
 
 /* ── ANNOUNCEMENT BAR ── */
 .announce{background:linear-gradient(135deg,var(--gold),var(--gold2));padding:10px 24px;text-align:center;}
@@ -33,7 +36,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .nav-links{display:flex;align-items:center;gap:6px;}
 .nav-link{font-size:13px;color:var(--ink2);text-decoration:none;font-weight:500;padding:7px 15px;border-radius:50px;transition:all .2s;}
 .nav-link:hover{background:var(--pale);}
-.nav-wa{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:700;font-size:13px;padding:10px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:7px;transition:all .25s;box-shadow:0 3px 12px rgba(184,135,42,.25);}
+.nav-wa{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:var(--font);font-weight:700;font-size:13px;padding:10px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:7px;transition:all .25s;box-shadow:0 3px 12px rgba(184,135,42,.25);}
 .nav-wa:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(184,135,42,.35);}
 
 /* ── HERO ── */
@@ -42,20 +45,20 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to left,rgba(44,26,6,0) 30%,rgba(44,26,6,.72) 60%,rgba(44,26,6,.92) 100%);}
 .hero-inner{position:relative;z-index:2;min-height:100vh;max-width:var(--w);margin:0 auto;padding:0 48px;display:flex;align-items:center;}
 .hero-content{max-width:500px;padding:80px 0;}
-.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:18px;}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--gold2);margin-bottom:16px;font-weight:600;}
 .hero-logo-inline{height:60px;margin-bottom:16px;display:block;}
-.hero-h{font-family:'Amiri',serif;font-size:clamp(50px,7vw,80px);color:#fff;line-height:.95;margin-bottom:16px;}
+.hero-h{font-family:var(--font-display);font-size:clamp(36px,7vw,72px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px;}
 .hero-h em{color:var(--gold2);font-style:italic;}
-.hero-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.85;max-width:420px;margin-bottom:24px;}
+.hero-p{font-size:16px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.9;max-width:420px;margin-bottom:24px;text-align:right;}
 .hero-social{display:flex;align-items:center;gap:10px;margin-bottom:28px;padding:12px 18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:50px;width:fit-content;}
 .hero-social-stars{font-size:13px;}
 .hero-social-txt{font-size:13px;color:rgba(255,255,255,.8);font-weight:500;}
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
 .hero-tag{font-size:12px;padding:6px 14px;border-radius:50px;border:1px solid rgba(212,160,48,.4);color:rgba(255,255,255,.7);}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:15px;padding:15px 36px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 6px 24px rgba(184,135,42,.4);border:none;cursor:pointer;}
+.btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:var(--font);font-weight:800;font-size:15px;padding:15px 36px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 6px 24px rgba(184,135,42,.4);border:none;cursor:pointer;}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(184,135,42,.5);}
-.btn-outline{background:transparent;color:rgba(255,255,255,.8);font-family:'Tajawal',sans-serif;font-weight:600;font-size:15px;padding:15px 30px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline{background:transparent;color:rgba(255,255,255,.8);font-family:var(--font);font-weight:600;font-size:15px;padding:15px 30px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
 .btn-outline:hover{background:rgba(255,255,255,.1);}
 
 /* ── TRUST BAR ── */
@@ -79,10 +82,10 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .sec.ltinted{background:var(--pale);}
 .inner{max-width:var(--w);margin:0 auto;padding:0 48px;}
 .center{text-align:center;}
-.eyebrow{display:block;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
-.sec-h{font-family:'Amiri',serif;font-size:clamp(28px,4vw,46px);color:var(--ink);line-height:1.1;margin-bottom:12px;}
-.sec-p{font-size:15px;font-weight:300;color:var(--ink2);line-height:1.9;margin-bottom:28px;max-width:520px;}
-.sec-p.mx{margin-left:auto;margin-right:auto;}
+.eyebrow{display:block;font-size:12px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;font-weight:600;}
+.sec-h{font-family:var(--font-display);font-size:clamp(24px,4vw,42px);font-weight:800;color:var(--ink);line-height:1.2;margin-bottom:12px;}
+.sec-p{font-size:15px;font-weight:400;color:var(--ink2);line-height:1.9;margin-bottom:28px;max-width:520px;}
+.sec-p.mx{margin-left:auto;margin-right:auto;text-align:center;}
 .rule{width:44px;height:2px;background:var(--gold2);margin:12px 0 20px;}
 .rule.cx{margin-left:auto;margin-right:auto;}
 
@@ -106,26 +109,27 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .pcard-urgency-txt{font-size:12px;font-weight:700;color:var(--gold);}
 .pcard-body{padding:24px 28px 30px;}
 .pcard-tag{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:block;}
-.pcard-name{font-family:'Amiri',serif;font-size:26px;color:var(--ink);line-height:1.1;margin-bottom:8px;}
-.pcard-desc{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.75;margin-bottom:16px;}
+.pcard-name{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--ink);line-height:1.2;margin-bottom:8px;}
+.pcard-desc{font-size:14px;font-weight:400;color:var(--ink2);line-height:1.8;margin-bottom:16px;text-align:right;}
 .pcard-specs{background:var(--sand);border-radius:12px;padding:14px 16px;margin-bottom:18px;display:flex;flex-direction:column;gap:6px;}
 .spec-row{display:flex;justify-content:space-between;}
 .spec-l{font-size:13px;font-weight:300;color:var(--ink2);}
 .spec-r{font-size:13px;font-weight:700;color:var(--ink);}
 .pcard-price-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
-.pcard-price{font-family:'Amiri',serif;font-size:38px;color:var(--ink);line-height:1;}
+.pcard-price-was{font-size:13px;color:var(--ink2);opacity:.55;text-decoration:line-through;margin-bottom:2px;}
+.pcard-price{font-family:var(--font-display);font-size:36px;font-weight:800;color:var(--ink);line-height:1;}
 .pcard-price sub{font-size:15px;color:var(--ink2);font-weight:300;}
 .pcard-per{font-size:12px;color:var(--gold);font-weight:700;margin-top:3px;}
 .pcard-note{font-size:12px;color:var(--ink2);font-weight:400;background:var(--pale);padding:4px 10px;border-radius:20px;}
-.btn-wa{width:100%;padding:15px;border-radius:50px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:15px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;text-decoration:none;box-shadow:0 4px 16px rgba(184,135,42,.3);}
+.btn-wa{width:100%;padding:15px;border-radius:50px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:var(--font);font-weight:800;font-size:15px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;text-decoration:none;box-shadow:0 4px 16px rgba(184,135,42,.3);}
 .btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(184,135,42,.45);}
 
 /* ── COMPARISON TABLE ── */
 .compare-wrap{overflow-x:auto;margin-top:24px;}
 .compare{width:100%;border-collapse:collapse;border-radius:16px;overflow:hidden;border:1.5px solid var(--bdr);}
-.compare th{padding:16px 20px;font-size:13px;font-weight:700;text-align:center;}
+.compare th{padding:16px 20px;font-size:13px;font-weight:700;text-align:center;font-family:var(--font);}
 .compare th:first-child{text-align:right;}
-.compare td{padding:14px 20px;font-size:13px;text-align:center;border-top:1px solid var(--bdr);}
+.compare td{padding:14px 20px;font-size:14px;text-align:center;border-top:1px solid var(--bdr);font-family:var(--font);}
 .compare td:first-child{text-align:right;font-weight:600;color:var(--ink);}
 .compare thead tr{background:var(--pale);}
 .compare thead th.highlight{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);}
@@ -142,7 +146,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .ing-row:hover{border-color:rgba(184,135,42,.3);background:var(--pale);}
 .ing-ico{font-size:24px;flex-shrink:0;}
 .ing-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px;}
-.ing-desc{font-size:12px;font-weight:300;color:var(--ink2);line-height:1.5;}
+.ing-desc{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.6;text-align:right;}
 
 /* ── BENEFITS ── */
 .bens{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;}
@@ -150,20 +154,63 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .ben:hover{border-color:rgba(184,135,42,.3);box-shadow:0 6px 20px rgba(44,26,6,.07);transform:translateY(-2px);}
 .ben-ico{font-size:26px;margin-bottom:10px;display:block;}
 .ben-h{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:5px;}
-.ben-p{font-size:12px;font-weight:300;color:var(--ink2);line-height:1.7;}
+.ben-p{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.7;text-align:right;}
 
 /* ── HOW ── */
 .how-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
 .how-steps{display:flex;flex-direction:column;gap:18px;}
 .how-step{display:flex;gap:14px;align-items:flex-start;}
-.how-num{width:42px;height:42px;min-width:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Amiri',serif;font-size:18px;font-weight:700;flex-shrink:0;}
+.how-num{width:42px;height:42px;min-width:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;font-weight:800;flex-shrink:0;}
 .how-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
-.how-p{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.7;}
+.how-p{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.7;text-align:right;}
+
+/* ── PRODUCT SHOWCASE ── */
+.showcase{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;background:var(--warm);}
+.showcase-img-wrap{position:relative;overflow:hidden;}
+.showcase-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .8s ease;}
+.showcase-img-wrap:hover .showcase-img{transform:scale(1.03);}
+.showcase-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(240,226,204,0) 60%,var(--warm) 100%);}
+.showcase-content{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 64px 48px;}
+.showcase-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);margin-bottom:20px;font-weight:600;}
+.showcase-h{font-family:var(--font-display);font-size:clamp(34px,4.5vw,54px);font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-.5px;margin-bottom:8px;}
+.showcase-sub{font-size:18px;font-weight:400;color:var(--ink2);margin-bottom:28px;line-height:1.6;}
+.showcase-divider{width:48px;height:2px;background:linear-gradient(90deg,var(--gold2),var(--gold));margin-bottom:28px;border-radius:2px;}
+.showcase-points{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.showcase-point{display:flex;align-items:flex-start;gap:14px;}
+.showcase-point-ico{width:36px;height:36px;min-width:36px;border-radius:10px;background:linear-gradient(135deg,var(--pale),var(--latte));display:flex;align-items:center;justify-content:center;font-size:16px;border:1px solid rgba(184,144,42,.2);}
+.showcase-point-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.showcase-point-p{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.6;}
+.showcase-cta{display:flex;flex-direction:column;gap:12px;}
+.showcase-price-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.showcase-price-badge{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-weight:800;font-size:13px;padding:6px 16px;border-radius:50px;}
+.showcase-price-was{font-size:13px;color:var(--ink2);text-decoration:line-through;opacity:.5;}
+.showcase-price-main{font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--ink);line-height:1;}
+.showcase-price-main sub{font-size:16px;font-weight:400;color:var(--ink2);}
+.showcase-price-per{font-size:12px;color:var(--gold);font-weight:700;margin-top:2px;}
+.showcase-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;font-family:var(--font);font-weight:700;font-size:15px;padding:16px 36px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(60,34,16,.25);}
+.showcase-btn:hover{background:var(--ink2);transform:translateY(-2px);box-shadow:0 10px 32px rgba(60,34,16,.3);}
+.showcase-stock{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink2);}
+.showcase-stock-dot{width:7px;height:7px;background:#C8A028;border-radius:50%;animation:pulse 1.8s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+@media(max-width:860px){
+  .showcase{grid-template-columns:1fr;min-height:auto;}
+  .showcase-img-wrap{height:420px;}
+  .showcase-img-overlay{background:linear-gradient(to top,var(--warm) 0%,rgba(240,226,204,0) 50%);}
+  .showcase-content{padding:36px 24px 48px;}
+}
+
+/* ── MID-PAGE CTA ── */
+.mid-cta{background:var(--ink);padding:36px 48px;}
+.mid-cta-inner{max-width:var(--w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.mid-cta-h{font-family:var(--font-display);font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;}
+.mid-cta-p{font-size:14px;color:rgba(255,255,255,.55);font-weight:400;}
+.mid-cta-btn{width:auto;padding:14px 36px;white-space:nowrap;}
+@media(max-width:860px){.mid-cta{padding:28px 20px;}.mid-cta-inner{flex-direction:column;text-align:center;}.mid-cta-btn{width:100%;}}
 
 /* ── QUOTE (light version) ── */
 .quote-sec{background:linear-gradient(135deg,var(--pale),var(--latte));padding:72px 48px;text-align:center;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);}
-.quote-mark{font-family:'Amiri',serif;font-size:80px;color:rgba(184,135,42,.2);line-height:1;margin-bottom:-30px;display:block;}
-.quote-txt{font-family:'Amiri',serif;font-style:italic;font-size:clamp(20px,3vw,32px);color:var(--ink);line-height:1.7;max-width:600px;margin:0 auto 18px;}
+.quote-mark{font-family:var(--font-display);font-size:80px;font-weight:800;color:rgba(184,135,42,.2);line-height:1;margin-bottom:-30px;display:block;}
+.quote-txt{font-family:var(--font-display);font-size:clamp(20px,3vw,30px);font-weight:600;color:var(--ink);line-height:1.7;max-width:600px;margin:0 auto 18px;}
 .quote-by{font-size:11px;letter-spacing:3px;color:var(--ink2);opacity:.6;text-transform:uppercase;}
 
 /* ── SHIPPING / POLICY ── */
@@ -172,20 +219,20 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .policy-card:hover{border-color:rgba(184,135,42,.3);box-shadow:0 6px 20px rgba(44,26,6,.07);}
 .policy-ico{font-size:32px;margin-bottom:12px;display:block;}
 .policy-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;}
-.policy-p{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.7;}
+.policy-p{font-size:13px;font-weight:400;color:var(--ink2);line-height:1.7;text-align:center;}
 
 /* ── GUARANTEE ── */
 .guarantee{background:linear-gradient(135deg,var(--pale),var(--latte));border:1.5px solid rgba(184,135,42,.25);border-radius:24px;padding:36px 40px;text-align:center;margin-top:12px;}
 .guarantee-ico{font-size:48px;margin-bottom:12px;display:block;}
-.guarantee-h{font-family:'Amiri',serif;font-size:28px;color:var(--ink);margin-bottom:8px;}
-.guarantee-p{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.8;max-width:480px;margin:0 auto;}
+.guarantee-h{font-family:var(--font-display);font-size:26px;font-weight:800;color:var(--ink);margin-bottom:8px;}
+.guarantee-p{font-size:14px;font-weight:400;color:var(--ink2);line-height:1.8;max-width:480px;margin:0 auto;text-align:center;}
 
 /* ── TESTIMONIALS ── */
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .review-card{background:var(--white);border:1.5px solid var(--bdr);border-radius:20px;padding:24px;transition:all .25s;}
 .review-card:hover{border-color:rgba(184,135,42,.25);box-shadow:0 6px 20px rgba(44,26,6,.07);}
 .review-stars{font-size:15px;margin-bottom:12px;}
-.review-txt{font-size:14px;font-weight:300;color:var(--ink);line-height:1.8;margin-bottom:16px;font-style:italic;}
+.review-txt{font-size:14px;font-weight:400;color:var(--ink);line-height:1.85;margin-bottom:16px;text-align:right;}
 .review-author{font-size:13px;font-weight:700;color:var(--gold);}
 .review-meta{font-size:11px;color:var(--ink2);font-weight:300;margin-top:2px;}
 
@@ -193,24 +240,24 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .faq-list{display:flex;flex-direction:column;gap:10px;max-width:700px;margin:0 auto;}
 .faq-item{background:var(--white);border:1.5px solid var(--bdr);border-radius:16px;overflow:hidden;transition:border-color .2s;}
 .faq-item:hover{border-color:rgba(184,135,42,.3);}
-.faq-item summary{font-size:15px;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;}
-.faq-icon{color:var(--gold);font-size:22px;line-height:1;transition:transform .2s;}
+.faq-item summary{font-size:15px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;text-align:right;}
+.faq-icon{color:var(--gold);font-size:22px;line-height:1;transition:transform .2s;flex-shrink:0;margin-right:auto;margin-left:0;}
 .faq-item[open] .faq-icon{transform:rotate(45deg);}
-.faq-body{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.8;padding:0 22px 18px;}
+.faq-body{font-size:14px;font-weight:400;color:var(--ink2);line-height:1.85;padding:0 22px 18px;text-align:right;}
 
 /* ── CTA SECTION ── */
 .cta-sec{background:linear-gradient(135deg,var(--pale),var(--latte));padding:80px 48px;text-align:center;border-top:1px solid var(--bdr);}
 .cta-logo{height:72px;margin:0 auto 28px;display:block;}
-.cta-h{font-family:'Amiri',serif;font-size:clamp(32px,5vw,54px);color:var(--ink);margin-bottom:10px;}
-.cta-p{font-size:15px;font-weight:300;color:var(--ink2);line-height:1.85;max-width:420px;margin:0 auto 20px;}
+.cta-h{font-family:var(--font-display);font-size:clamp(28px,5vw,50px);font-weight:800;color:var(--ink);margin-bottom:10px;}
+.cta-p{font-size:15px;font-weight:400;color:var(--ink2);line-height:1.85;max-width:420px;margin:0 auto 20px;text-align:center;}
 .cta-prices{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:16px 0 4px;}
 .cta-price{background:var(--white);border:1.5px solid var(--bdr);border-radius:16px;padding:18px 28px;text-align:center;min-width:160px;}
 .cta-price.inv{background:var(--ink);border-color:transparent;}
-.cta-price-n{font-family:'Amiri',serif;font-size:30px;color:var(--ink);line-height:1;}
+.cta-price-n{font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--ink);line-height:1;}
 .cta-price.inv .cta-price-n{color:var(--gold2);}
 .cta-price-l{font-size:12px;color:var(--ink2);margin-top:4px;font-weight:400;}
 .cta-price.inv .cta-price-l{color:rgba(255,255,255,.45);}
-.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:#16a34a;color:#fff;font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;padding:17px 48px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(22,163,74,.3);margin-top:24px;}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:#16a34a;color:#fff;font-family:var(--font);font-weight:700;font-size:16px;padding:17px 48px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(22,163,74,.3);margin-top:24px;}
 .btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(22,163,74,.4);}
 .cta-small{font-size:12px;color:var(--ink2);opacity:.55;margin-top:10px;}
 .cta-phone{display:block;font-size:14px;font-weight:600;color:var(--gold);margin-top:8px;letter-spacing:.5px;}
@@ -220,7 +267,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 footer{background:var(--pale);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:2px solid var(--latte);}
 .footer-left{display:flex;align-items:center;gap:14px;}
 .footer-logo{height:38px;opacity:.8;}
-.footer-name{font-family:'Amiri',serif;font-size:18px;color:var(--ink2);}
+.footer-name{font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--ink2);}
 footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 .footer-links{display:flex;gap:18px;}
 .footer-links a{font-size:12px;color:var(--ink2);text-decoration:none;transition:color .2s;opacity:.6;}
@@ -252,10 +299,11 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 }
 @media(max-width:520px){
   .bens{grid-template-columns:1fr;}
-  .hero-h{font-size:46px;}
+  .hero-h{font-size:34px;line-height:1.15;}
   .reviews-grid{grid-template-columns:1fr;}
 }
 </style>
+<script>if('scrollRestoration' in history)history.scrollRestoration='manual';window.scrollTo(0,0);</script>
 </head>
 <body>
 
@@ -285,9 +333,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-kicker">قهوة الشعير الأصلية</div>
-      <img src="logo.png" class="hero-logo-inline" alt="Jehair">
-      <h1 class="hero-h">طعم<br><em>الوالدة</em><br>بفوائد أصيلة</h1>
+      <div class="hero-kicker">🌾 قهوة الشعير الأصلية</div>
+      <h1 class="hero-h">طعم <em>الوالدة</em><br>بفوائد أصيلة</h1>
       <p class="hero-p">ستة مكوّنات طبيعية نقية، مُعبّأة في ظروف أنيقة. تحضير فوري في 30 ثانية، نكهة خليجية أصيلة — بدون كافيين.</p>
       <div class="hero-social">
         <span class="hero-social-stars">⭐⭐⭐⭐⭐</span>
@@ -300,8 +347,8 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         <span class="hero-tag">✨ ظروف فردية</span>
       </div>
       <div class="hero-btns">
-        <a href="#products" class="btn-primary">🛍️ اطلب الآن</a>
-        <a href="#ingredients" class="btn-outline">اكتشف المكوّنات</a>
+        <a href="https://wa.me/+966555200445?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-primary">📲 اطلب الآن</a>
+        <a href="#products" class="btn-outline">شوف المنتجات</a>
       </div>
     </div>
   </div>
@@ -326,6 +373,49 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
   <div class="mosaic-c"><img src="box2.jpg" alt="بوكس الكوب"></div>
 </div>
 
+<!-- PRODUCT SHOWCASE -->
+<section class="showcase" id="showcase">
+  <div class="showcase-img-wrap">
+    <img src="product.jpg" class="showcase-img" alt="جهيّر — قهوة شعير طبيعية">
+    <div class="showcase-img-overlay"></div>
+  </div>
+  <div class="showcase-content">
+    <div class="showcase-kicker">⭐ الأكثر طلباً</div>
+    <h2 class="showcase-h">قهوة شعير<br>طبيعية</h2>
+    <p class="showcase-sub">بديل يومي لطيف للقهوة — نكهة خليجية أصيلة بلا كافيين</p>
+    <div class="showcase-divider"></div>
+    <div class="showcase-points">
+      <div class="showcase-point">
+        <div class="showcase-point-ico">🌾</div>
+        <div><div class="showcase-point-h">ستة مكوّنات طبيعية نقية</div><div class="showcase-point-p">شعير · كركم · زعفران · هيل · زنجبيل · عصفر</div></div>
+      </div>
+      <div class="showcase-point">
+        <div class="showcase-point-ico">⚡</div>
+        <div><div class="showcase-point-h">طاقة بلا كافيين</div><div class="showcase-point-p">نشاط طبيعي طوال اليوم — ينام هادئاً في الليل</div></div>
+      </div>
+      <div class="showcase-point">
+        <div class="showcase-point-ico">✨</div>
+        <div><div class="showcase-point-h">ظروف فردية أنيقة</div><div class="showcase-point-p">تحضير في 30 ثانية — جرعة مثالية في كل ظرف</div></div>
+      </div>
+    </div>
+    <div class="showcase-cta">
+      <div class="showcase-price-row">
+        <div>
+          <div class="showcase-price-was">145 ر.س</div>
+          <div class="showcase-price-main">115 <sub>ر.س</sub></div>
+          <div class="showcase-price-per">3.8 ريال للكوب فقط · 30 ظرف</div>
+        </div>
+        <div class="showcase-price-badge">وفّر 30 ر.س</div>
+      </div>
+      <a href="https://wa.me/+966555200445?text=أريد طلب بوكس الكوب 30 ظرف" class="showcase-btn">📲 اطلب الآن عبر واتساب</a>
+      <div class="showcase-stock">
+        <span class="showcase-stock-dot"></span>
+        تبقّى <strong>5 بوكسات</strong> فقط من هذا الحجم
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRODUCTS -->
 <section class="sec" id="products">
   <div class="inner">
@@ -345,7 +435,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
         </div>
         <div class="pcard-urgency">
           <span>🎁</span>
-          <span class="pcard-urgency-txt">مثالي للهدايا والرحلات العائلية</span>
+          <span class="pcard-urgency-txt">مثالي للهدايا والرحلات العائلية &nbsp;·&nbsp; تبقّى <strong>9 بوكسات</strong></span>
         </div>
         <div class="pcard-body">
           <span class="pcard-tag">بوكس الترمس</span>
@@ -358,6 +448,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
           </div>
           <div class="pcard-price-row">
             <div>
+              <div class="pcard-price-was">110 ر.س</div>
               <div class="pcard-price">89 <sub>ر.س</sub></div>
               <div class="pcard-per">7.4 ريال للظرف فقط</div>
             </div>
@@ -370,12 +461,12 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
       <!-- PRODUCT 2 (Featured) -->
       <div class="pcard featured">
         <div class="pcard-photo">
-          <img src="box2.jpg" alt="بوكس 30 ظرف">
+          <img src="product.jpg" alt="بوكس 30 ظرف" style="object-position:center 20%;">
           <div class="pcard-badge badge-gold">⭐ الأكثر طلباً</div>
         </div>
         <div class="pcard-urgency">
           <span>🔥</span>
-          <span class="pcard-urgency-txt">الكميات محدودة — اطلب الآن قبل النفاذ</span>
+          <span class="pcard-urgency-txt">الكميات محدودة — تبقّى <strong>5 بوكسات</strong> فقط</span>
         </div>
         <div class="pcard-body">
           <span class="pcard-tag">بوكس الكوب اليومي</span>
@@ -388,6 +479,7 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
           </div>
           <div class="pcard-price-row">
             <div>
+              <div class="pcard-price-was">145 ر.س</div>
               <div class="pcard-price">115 <sub>ر.س</sub></div>
               <div class="pcard-per">3.8 ريال للكوب فقط</div>
             </div>
@@ -473,6 +565,17 @@ footer p{font-size:11px;color:var(--ink2);opacity:.5;}
     </div>
   </div>
 </section>
+
+<!-- MID-PAGE CTA -->
+<div class="mid-cta">
+  <div class="mid-cta-inner">
+    <div class="mid-cta-txt">
+      <div class="mid-cta-h">مستعد تجرّب؟</div>
+      <div class="mid-cta-p">تحضير في 30 ثانية · شحن لجميع مناطق المملكة</div>
+    </div>
+    <a href="https://wa.me/+966555200445?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-wa mid-cta-btn">📲 اطلب الآن عبر واتساب</a>
+  </div>
+</div>
 
 <!-- QUOTE -->
 <div class="quote-sec">
