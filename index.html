@@ -14,54 +14,69 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 :root{
-  --ink:#2C1A06;--ink2:#6B420F;--gold:#B8862A;--gold2:#D4A84A;
-  --cream:#FDFAF4;--sand:#F5EDD8;--pale:#EDE0C8;
-  --white:#FFFFFF;--bdr:rgba(44,26,6,.09);--r:16px;--w:1040px;
+  --ink:#2C1A06;--ink2:#7A5230;--gold:#B8872A;--gold2:#D4A030;
+  --cream:#FFFFFF;--sand:#FDF6EC;--pale:#F7ECD9;--latte:#EDD9B8;
+  --white:#FFFFFF;--bdr:rgba(44,26,6,.10);--r:16px;--w:1040px;
 }
 body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);direction:rtl;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 
-.nav{position:sticky;top:0;z-index:99;background:rgba(253,250,244,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);height:68px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;}
+/* ── ANNOUNCEMENT BAR ── */
+.announce{background:linear-gradient(135deg,var(--gold),var(--gold2));padding:10px 24px;text-align:center;}
+.announce-txt{font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.3px;}
+.announce-txt span{opacity:.75;font-weight:400;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);height:68px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;}
 .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .nav-logo{height:48px;width:auto;}
 .nav-tagline{font-size:10px;letter-spacing:2px;color:var(--gold);margin-top:2px;}
 .nav-links{display:flex;align-items:center;gap:6px;}
 .nav-link{font-size:13px;color:var(--ink2);text-decoration:none;font-weight:500;padding:7px 15px;border-radius:50px;transition:all .2s;}
-.nav-link:hover{background:var(--sand);}
-.nav-wa{background:var(--ink);color:#fff;font-family:'Tajawal',sans-serif;font-weight:700;font-size:13px;padding:10px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:7px;transition:all .25s;}
-.nav-wa:hover{background:var(--ink2);transform:translateY(-1px);}
+.nav-link:hover{background:var(--pale);}
+.nav-wa{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:700;font-size:13px;padding:10px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:7px;transition:all .25s;box-shadow:0 3px 12px rgba(184,135,42,.25);}
+.nav-wa:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(184,135,42,.35);}
 
+/* ── HERO ── */
 .hero{position:relative;min-height:100vh;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to left,rgba(44,26,6,0) 35%,rgba(44,26,6,.75) 65%,rgba(44,26,6,.92) 100%);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to left,rgba(44,26,6,0) 30%,rgba(44,26,6,.72) 60%,rgba(44,26,6,.92) 100%);}
 .hero-inner{position:relative;z-index:2;min-height:100vh;max-width:var(--w);margin:0 auto;padding:0 48px;display:flex;align-items:center;}
-.hero-content{max-width:480px;padding:80px 0;}
+.hero-content{max-width:500px;padding:80px 0;}
 .hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:18px;}
 .hero-logo-inline{height:60px;margin-bottom:16px;display:block;}
-.hero-h{font-family:'Amiri',serif;font-size:clamp(52px,7vw,84px);color:#fff;line-height:.95;margin-bottom:16px;}
+.hero-h{font-family:'Amiri',serif;font-size:clamp(50px,7vw,80px);color:#fff;line-height:.95;margin-bottom:16px;}
 .hero-h em{color:var(--gold2);font-style:italic;}
-.hero-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.85;max-width:400px;margin-bottom:32px;}
+.hero-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.85;max-width:420px;margin-bottom:24px;}
+.hero-social{display:flex;align-items:center;gap:10px;margin-bottom:28px;padding:12px 18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:50px;width:fit-content;}
+.hero-social-stars{font-size:13px;}
+.hero-social-txt{font-size:13px;color:rgba(255,255,255,.8);font-weight:500;}
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
-.hero-tag{font-size:12px;padding:6px 14px;border-radius:50px;border:1px solid rgba(212,168,74,.35);color:rgba(255,255,255,.65);}
+.hero-tag{font-size:12px;padding:6px 14px;border-radius:50px;border:1px solid rgba(212,160,48,.4);color:rgba(255,255,255,.7);}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:15px;padding:14px 34px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 6px 24px rgba(184,134,42,.35);border:none;cursor:pointer;}
-.btn-primary:hover{transform:translateY(-2px);}
-.btn-outline{background:transparent;color:rgba(255,255,255,.75);font-family:'Tajawal',sans-serif;font-weight:600;font-size:15px;padding:14px 30px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,.25);transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
-.btn-outline:hover{background:rgba(255,255,255,.08);}
+.btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:15px;padding:15px 36px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 6px 24px rgba(184,135,42,.4);border:none;cursor:pointer;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(184,135,42,.5);}
+.btn-outline{background:transparent;color:rgba(255,255,255,.8);font-family:'Tajawal',sans-serif;font-weight:600;font-size:15px;padding:15px 30px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline:hover{background:rgba(255,255,255,.1);}
 
-.trust{background:var(--pale);border-bottom:1px solid var(--bdr);padding:16px 48px;}
+/* ── TRUST BAR ── */
+.trust{background:var(--sand);border-bottom:1px solid var(--bdr);padding:16px 48px;}
 .trust-row{max-width:var(--w);margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:12px;}
 .trust-item{display:flex;align-items:center;gap:8px;}
 .t-ico{font-size:17px;}
 .t-txt{font-size:13px;color:var(--ink2);font-weight:500;}
+.t-txt strong{color:var(--ink);}
 
-.mosaic{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:340px 280px;gap:3px;background:var(--ink);}
+/* ── MOSAIC ── */
+.mosaic{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:340px 280px;gap:3px;background:var(--latte);}
 .mosaic-a{grid-row:1/3;overflow:hidden;}
 .mosaic-b,.mosaic-c{overflow:hidden;}
 .mosaic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;}
 .mosaic>div:hover img{transform:scale(1.04);}
 
+/* ── SECTIONS ── */
 .sec{padding:84px 0;}
 .sec.tinted{background:var(--sand);}
+.sec.ltinted{background:var(--pale);}
 .inner{max-width:var(--w);margin:0 auto;padding:0 48px;}
 .center{text-align:center;}
 .eyebrow{display:block;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
@@ -70,19 +85,26 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .sec-p.mx{margin-left:auto;margin-right:auto;}
 .rule{width:44px;height:2px;background:var(--gold2);margin:12px 0 20px;}
 .rule.cx{margin-left:auto;margin-right:auto;}
-.hr{width:100%;height:1px;background:var(--bdr);margin:32px 0;}
 
-.products{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px;}
-.pcard{background:var(--white);border:1px solid var(--bdr);border-radius:20px;overflow:hidden;transition:box-shadow .3s,transform .3s;}
-.pcard:hover{box-shadow:0 14px 44px rgba(44,26,6,.1);transform:translateY(-3px);}
-.pcard.featured{border-color:rgba(184,134,42,.3);}
+/* ── URGENCY STRIP ── */
+.urgency-strip{background:var(--pale);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:12px 48px;text-align:center;}
+.urgency-strip p{font-size:13px;color:var(--ink2);}
+.urgency-strip strong{color:var(--gold);}
+
+/* ── PRODUCTS ── */
+.products{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+.pcard{background:var(--white);border:1.5px solid var(--bdr);border-radius:24px;overflow:hidden;transition:box-shadow .3s,transform .3s;}
+.pcard:hover{box-shadow:0 16px 48px rgba(44,26,6,.12);transform:translateY(-4px);}
+.pcard.featured{border-color:rgba(184,135,42,.35);box-shadow:0 4px 20px rgba(184,135,42,.12);}
 .pcard-photo{height:300px;overflow:hidden;position:relative;}
 .pcard-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
 .pcard:hover .pcard-photo img{transform:scale(1.04);}
-.pcard-badge{position:absolute;top:14px;right:14px;font-size:11px;font-weight:700;padding:5px 13px;border-radius:50px;letter-spacing:.5px;}
-.badge-neutral{background:rgba(44,26,6,.7);color:rgba(255,255,255,.9);}
+.pcard-badge{position:absolute;top:14px;right:14px;font-size:11px;font-weight:700;padding:6px 14px;border-radius:50px;letter-spacing:.5px;}
+.badge-neutral{background:rgba(255,255,255,.88);color:var(--ink);border:1px solid var(--bdr);}
 .badge-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);}
-.pcard-body{padding:26px 28px 30px;}
+.pcard-urgency{background:linear-gradient(135deg,#FEF3D8,#FDE8B4);border-bottom:1px solid rgba(184,135,42,.2);padding:8px 18px;display:flex;align-items:center;gap:8px;}
+.pcard-urgency-txt{font-size:12px;font-weight:700;color:var(--gold);}
+.pcard-body{padding:24px 28px 30px;}
 .pcard-tag{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:block;}
 .pcard-name{font-family:'Amiri',serif;font-size:26px;color:var(--ink);line-height:1.1;margin-bottom:8px;}
 .pcard-desc{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.75;margin-bottom:16px;}
@@ -91,71 +113,126 @@ body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);d
 .spec-l{font-size:13px;font-weight:300;color:var(--ink2);}
 .spec-r{font-size:13px;font-weight:700;color:var(--ink);}
 .pcard-price-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
-.pcard-price{font-family:'Amiri',serif;font-size:36px;color:var(--ink);line-height:1;}
+.pcard-price{font-family:'Amiri',serif;font-size:38px;color:var(--ink);line-height:1;}
 .pcard-price sub{font-size:15px;color:var(--ink2);font-weight:300;}
-.pcard-per{font-size:12px;color:var(--gold);font-weight:600;margin-top:3px;}
-.pcard-note{font-size:12px;color:var(--ink2);font-weight:300;}
-.btn-wa{width:100%;padding:14px;border-radius:50px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:14px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;text-decoration:none;box-shadow:0 4px 16px rgba(184,134,42,.28);}
-.btn-wa:hover{transform:translateY(-2px);}
+.pcard-per{font-size:12px;color:var(--gold);font-weight:700;margin-top:3px;}
+.pcard-note{font-size:12px;color:var(--ink2);font-weight:400;background:var(--pale);padding:4px 10px;border-radius:20px;}
+.btn-wa{width:100%;padding:15px;border-radius:50px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:15px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;text-decoration:none;box-shadow:0 4px 16px rgba(184,135,42,.3);}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(184,135,42,.45);}
 
+/* ── COMPARISON TABLE ── */
+.compare-wrap{overflow-x:auto;margin-top:24px;}
+.compare{width:100%;border-collapse:collapse;border-radius:16px;overflow:hidden;border:1.5px solid var(--bdr);}
+.compare th{padding:16px 20px;font-size:13px;font-weight:700;text-align:center;}
+.compare th:first-child{text-align:right;}
+.compare td{padding:14px 20px;font-size:13px;text-align:center;border-top:1px solid var(--bdr);}
+.compare td:first-child{text-align:right;font-weight:600;color:var(--ink);}
+.compare thead tr{background:var(--pale);}
+.compare thead th.highlight{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);}
+.compare tbody tr:nth-child(even){background:var(--sand);}
+.compare .yes{color:#16a34a;font-size:17px;}
+.compare .no{color:#dc2626;font-size:17px;}
+.compare .neutral{color:var(--ink2);}
+
+/* ── INGREDIENTS ── */
 .ing-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
-.ing-photo,.how-photo{width:100%;border-radius:20px;display:block;box-shadow:0 12px 40px rgba(44,26,6,.12);}
+.ing-photo,.how-photo{width:100%;border-radius:20px;display:block;box-shadow:0 12px 40px rgba(44,26,6,.10);}
 .ing-rows{display:flex;flex-direction:column;gap:10px;}
 .ing-row{display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--white);border:1px solid var(--bdr);border-radius:var(--r);transition:all .2s;}
-.ing-row:hover{border-color:rgba(184,134,42,.3);background:var(--sand);}
+.ing-row:hover{border-color:rgba(184,135,42,.3);background:var(--pale);}
 .ing-ico{font-size:24px;flex-shrink:0;}
 .ing-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px;}
 .ing-desc{font-size:12px;font-weight:300;color:var(--ink2);line-height:1.5;}
 
+/* ── BENEFITS ── */
 .bens{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;}
-.ben{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r);padding:20px;transition:all .25s;}
-.ben:hover{border-color:rgba(184,134,42,.25);box-shadow:0 4px 16px rgba(44,26,6,.06);}
+.ben{background:var(--white);border:1.5px solid var(--bdr);border-radius:var(--r);padding:22px;transition:all .25s;}
+.ben:hover{border-color:rgba(184,135,42,.3);box-shadow:0 6px 20px rgba(44,26,6,.07);transform:translateY(-2px);}
 .ben-ico{font-size:26px;margin-bottom:10px;display:block;}
 .ben-h{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:5px;}
 .ben-p{font-size:12px;font-weight:300;color:var(--ink2);line-height:1.7;}
 
+/* ── HOW ── */
 .how-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
 .how-steps{display:flex;flex-direction:column;gap:18px;}
 .how-step{display:flex;gap:14px;align-items:flex-start;}
-.how-num{width:40px;height:40px;min-width:40px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Amiri',serif;font-size:17px;font-weight:700;flex-shrink:0;}
+.how-num{width:42px;height:42px;min-width:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Amiri',serif;font-size:18px;font-weight:700;flex-shrink:0;}
 .how-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
 .how-p{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.7;}
 
-.quote-sec{background:var(--ink);padding:72px 48px;text-align:center;}
-.quote-mark{font-family:'Amiri',serif;font-size:80px;color:rgba(212,168,74,.15);line-height:1;margin-bottom:-30px;display:block;}
-.quote-txt{font-family:'Amiri',serif;font-style:italic;font-size:clamp(20px,3vw,32px);color:rgba(255,255,255,.85);line-height:1.7;max-width:600px;margin:0 auto 18px;}
-.quote-by{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,.25);text-transform:uppercase;}
+/* ── QUOTE (light version) ── */
+.quote-sec{background:linear-gradient(135deg,var(--pale),var(--latte));padding:72px 48px;text-align:center;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);}
+.quote-mark{font-family:'Amiri',serif;font-size:80px;color:rgba(184,135,42,.2);line-height:1;margin-bottom:-30px;display:block;}
+.quote-txt{font-family:'Amiri',serif;font-style:italic;font-size:clamp(20px,3vw,32px);color:var(--ink);line-height:1.7;max-width:600px;margin:0 auto 18px;}
+.quote-by{font-size:11px;letter-spacing:3px;color:var(--ink2);opacity:.6;text-transform:uppercase;}
 
-.cta-sec{background:var(--sand);padding:80px 48px;text-align:center;border-top:1px solid var(--bdr);}
+/* ── SHIPPING / POLICY ── */
+.policy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px;}
+.policy-card{background:var(--white);border:1.5px solid var(--bdr);border-radius:20px;padding:28px 22px;text-align:center;transition:all .25s;}
+.policy-card:hover{border-color:rgba(184,135,42,.3);box-shadow:0 6px 20px rgba(44,26,6,.07);}
+.policy-ico{font-size:32px;margin-bottom:12px;display:block;}
+.policy-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.policy-p{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.7;}
+
+/* ── GUARANTEE ── */
+.guarantee{background:linear-gradient(135deg,var(--pale),var(--latte));border:1.5px solid rgba(184,135,42,.25);border-radius:24px;padding:36px 40px;text-align:center;margin-top:12px;}
+.guarantee-ico{font-size:48px;margin-bottom:12px;display:block;}
+.guarantee-h{font-family:'Amiri',serif;font-size:28px;color:var(--ink);margin-bottom:8px;}
+.guarantee-p{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.8;max-width:480px;margin:0 auto;}
+
+/* ── TESTIMONIALS ── */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.review-card{background:var(--white);border:1.5px solid var(--bdr);border-radius:20px;padding:24px;transition:all .25s;}
+.review-card:hover{border-color:rgba(184,135,42,.25);box-shadow:0 6px 20px rgba(44,26,6,.07);}
+.review-stars{font-size:15px;margin-bottom:12px;}
+.review-txt{font-size:14px;font-weight:300;color:var(--ink);line-height:1.8;margin-bottom:16px;font-style:italic;}
+.review-author{font-size:13px;font-weight:700;color:var(--gold);}
+.review-meta{font-size:11px;color:var(--ink2);font-weight:300;margin-top:2px;}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;gap:10px;max-width:700px;margin:0 auto;}
+.faq-item{background:var(--white);border:1.5px solid var(--bdr);border-radius:16px;overflow:hidden;transition:border-color .2s;}
+.faq-item:hover{border-color:rgba(184,135,42,.3);}
+.faq-item summary{font-size:15px;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;}
+.faq-icon{color:var(--gold);font-size:22px;line-height:1;transition:transform .2s;}
+.faq-item[open] .faq-icon{transform:rotate(45deg);}
+.faq-body{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.8;padding:0 22px 18px;}
+
+/* ── CTA SECTION ── */
+.cta-sec{background:linear-gradient(135deg,var(--pale),var(--latte));padding:80px 48px;text-align:center;border-top:1px solid var(--bdr);}
 .cta-logo{height:72px;margin:0 auto 28px;display:block;}
 .cta-h{font-family:'Amiri',serif;font-size:clamp(32px,5vw,54px);color:var(--ink);margin-bottom:10px;}
-.cta-p{font-size:15px;font-weight:300;color:var(--ink2);line-height:1.85;max-width:400px;margin:0 auto 20px;}
+.cta-p{font-size:15px;font-weight:300;color:var(--ink2);line-height:1.85;max-width:420px;margin:0 auto 20px;}
 .cta-prices{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:16px 0 4px;}
-.cta-price{background:var(--white);border:1px solid var(--bdr);border-radius:14px;padding:14px 22px;text-align:center;min-width:150px;}
+.cta-price{background:var(--white);border:1.5px solid var(--bdr);border-radius:16px;padding:18px 28px;text-align:center;min-width:160px;}
 .cta-price.inv{background:var(--ink);border-color:transparent;}
-.cta-price-n{font-family:'Amiri',serif;font-size:26px;color:var(--ink);line-height:1;}
+.cta-price-n{font-family:'Amiri',serif;font-size:30px;color:var(--ink);line-height:1;}
 .cta-price.inv .cta-price-n{color:var(--gold2);}
-.cta-price-l{font-size:12px;color:var(--ink2);margin-top:3px;font-weight:300;}
-.cta-price.inv .cta-price-l{color:rgba(255,255,255,.4);}
-.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:#22C55E;color:#fff;font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;padding:16px 42px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(34,197,94,.28);margin-top:24px;}
-.btn-whatsapp:hover{transform:translateY(-2px);}
+.cta-price-l{font-size:12px;color:var(--ink2);margin-top:4px;font-weight:400;}
+.cta-price.inv .cta-price-l{color:rgba(255,255,255,.45);}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:#16a34a;color:#fff;font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;padding:17px 48px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(22,163,74,.3);margin-top:24px;}
+.btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(22,163,74,.4);}
 .cta-small{font-size:12px;color:var(--ink2);opacity:.55;margin-top:10px;}
-.cta-phone{display:block;font-size:14px;font-weight:500;color:var(--ink2);margin-top:5px;letter-spacing:.5px;}
+.cta-phone{display:block;font-size:14px;font-weight:600;color:var(--gold);margin-top:8px;letter-spacing:.5px;}
+.cta-guarantee{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink2);margin-top:14px;background:var(--white);padding:8px 18px;border-radius:50px;border:1px solid var(--bdr);}
 
-footer{background:var(--ink);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:2px solid var(--gold);}
+/* ── FOOTER (light) ── */
+footer{background:var(--pale);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:2px solid var(--latte);}
 .footer-left{display:flex;align-items:center;gap:14px;}
-.footer-logo{height:38px;filter:brightness(0) invert(1);opacity:.75;}
-.footer-name{font-family:'Amiri',serif;font-size:18px;color:rgba(255,255,255,.7);}
-footer p{font-size:11px;color:rgba(255,255,255,.22);}
+.footer-logo{height:38px;opacity:.8;}
+.footer-name{font-family:'Amiri',serif;font-size:18px;color:var(--ink2);}
+footer p{font-size:11px;color:var(--ink2);opacity:.5;}
 .footer-links{display:flex;gap:18px;}
-.footer-links a{font-size:12px;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--gold2);}
+.footer-links a{font-size:12px;color:var(--ink2);text-decoration:none;transition:color .2s;opacity:.6;}
+.footer-links a:hover{color:var(--gold);opacity:1;}
 
+/* ── MOBILE WA ── */
 .mobile-wa{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:98;}
 
+/* ── RESPONSIVE ── */
 @media(max-width:860px){
   .nav{padding:0 20px;}.nav-links{display:none;}
-  .hero-overlay{background:linear-gradient(to top,rgba(44,26,6,.96) 42%,rgba(44,26,6,.5) 100%);}
+  .hero-overlay{background:linear-gradient(to top,rgba(44,26,6,.96) 40%,rgba(44,26,6,.5) 100%);}
   .hero-inner{padding:0 24px;align-items:flex-end;}
   .hero-content{padding:40px 0 80px;max-width:100%;}
   .mosaic{grid-template-columns:1fr;grid-template-rows:280px 220px 220px;}
@@ -163,20 +240,31 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
   .products{grid-template-columns:1fr;}
   .ing-layout,.how-layout{grid-template-columns:1fr;}
   .bens{grid-template-columns:1fr 1fr;}
+  .policy-grid{grid-template-columns:1fr;}
+  .reviews-grid{grid-template-columns:1fr;}
   .inner{padding:0 20px;}.sec{padding:60px 0;}
   .trust{padding:14px 20px;}
   .cta-sec,.quote-sec{padding:60px 20px;}
   footer{flex-direction:column;text-align:center;padding:28px 20px;}
   .mobile-wa{display:block;}
+  .announce{padding:10px 16px;}
+  .urgency-strip{padding:12px 20px;}
 }
 @media(max-width:520px){
   .bens{grid-template-columns:1fr;}
-  .hero-h{font-size:48px;}
+  .hero-h{font-size:46px;}
+  .reviews-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce">
+  <p class="announce-txt">🌾 شحن مجاني لجميع مناطق المملكة <span>· اطلب الآن وابدأ رحلتك الصحية</span></p>
+</div>
+
+<!-- NAV -->
 <nav class="nav">
   <a href="#top" class="nav-brand">
     <img src="logo.png" class="nav-logo" alt="Jehair">
@@ -186,10 +274,12 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
     <a href="#products" class="nav-link">المنتجات</a>
     <a href="#ingredients" class="nav-link">المكوّنات</a>
     <a href="#how" class="nav-link">التحضير</a>
+    <a href="#reviews" class="nav-link">آراء العملاء</a>
   </div>
-  <a href="https://wa.me/+966555200444" class="nav-wa">📲 اطلب الآن</a>
+  <a href="https://wa.me/+966555200445" class="nav-wa">📲 اطلب الآن</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="top">
   <img src="hero.jpg" class="hero-bg" alt="">
   <div class="hero-overlay"></div>
@@ -197,8 +287,12 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
     <div class="hero-content">
       <div class="hero-kicker">قهوة الشعير الأصلية</div>
       <img src="logo.png" class="hero-logo-inline" alt="Jehair">
-      <h1 class="hero-h">قهوة<br><em>الشعير</em><br>الأصلية</h1>
-      <p class="hero-p">وصفة الوالدة — ستة مكوّنات طبيعية نقية، مُعبّأة في ظروف أنيقة. تحضير فوري، نكهة أصيلة، فوائد حقيقية.</p>
+      <h1 class="hero-h">طعم<br><em>الوالدة</em><br>بفوائد أصيلة</h1>
+      <p class="hero-p">ستة مكوّنات طبيعية نقية، مُعبّأة في ظروف أنيقة. تحضير فوري في 30 ثانية، نكهة خليجية أصيلة — بدون كافيين.</p>
+      <div class="hero-social">
+        <span class="hero-social-stars">⭐⭐⭐⭐⭐</span>
+        <span class="hero-social-txt">+500 عميل راضٍ في جميع مناطق المملكة</span>
+      </div>
       <div class="hero-tags">
         <span class="hero-tag">🌾 بيتا-جلوكان طبيعي</span>
         <span class="hero-tag">⚡ بلا كافيين</span>
@@ -213,22 +307,26 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
   </div>
 </section>
 
+<!-- TRUST BAR -->
 <div class="trust">
   <div class="trust-row">
+    <div class="trust-item"><span class="t-ico">⭐</span><span class="t-txt"><strong>4.9/5</strong> تقييم العملاء</span></div>
     <div class="trust-item"><span class="t-ico">🌿</span><span class="t-txt">100% طبيعي</span></div>
     <div class="trust-item"><span class="t-ico">⚡</span><span class="t-txt">بلا كافيين</span></div>
-    <div class="trust-item"><span class="t-ico">✨</span><span class="t-txt">ظروف فردية أنيقة</span></div>
     <div class="trust-item"><span class="t-ico">🚀</span><span class="t-txt">شحن سريع للمملكة</span></div>
-    <div class="trust-item"><span class="t-ico">📲</span><span class="t-txt">طلب مباشر واتساب</span></div>
+    <div class="trust-item"><span class="t-ico">🛡️</span><span class="t-txt">ضمان الاستبدال</span></div>
+    <div class="trust-item"><span class="t-ico">📲</span><span class="t-txt">رد فوري على واتساب</span></div>
   </div>
 </div>
 
+<!-- MOSAIC -->
 <div class="mosaic">
   <div class="mosaic-a"><img src="hero2.jpg" alt="قهوة الشعير"></div>
   <div class="mosaic-b"><img src="box1b.jpg" alt="بوكس الترمس" style="object-position:center top;"></div>
   <div class="mosaic-c"><img src="box2.jpg" alt="بوكس الكوب"></div>
 </div>
 
+<!-- PRODUCTS -->
 <section class="sec" id="products">
   <div class="inner">
     <div class="center">
@@ -238,10 +336,16 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
       <p class="sec-p mx">ظروف فردية مصمّمة بعناية — كل ظرف جرعة كاملة مثالية، سهلة الحمل وجميلة كهدية</p>
     </div>
     <div class="products">
+
+      <!-- PRODUCT 1 -->
       <div class="pcard">
         <div class="pcard-photo">
           <img src="box1b.jpg" alt="بوكس 12 ظرف">
           <div class="pcard-badge badge-neutral">12 ظرف</div>
+        </div>
+        <div class="pcard-urgency">
+          <span>🎁</span>
+          <span class="pcard-urgency-txt">مثالي للهدايا والرحلات العائلية</span>
         </div>
         <div class="pcard-body">
           <span class="pcard-tag">بوكس الترمس</span>
@@ -253,16 +357,25 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
             <div class="spec-row"><span class="spec-l">مناسب لـ</span><span class="spec-r">الترمس والدلة</span></div>
           </div>
           <div class="pcard-price-row">
-            <div><div class="pcard-price">89 <sub>ر.س</sub></div><div class="pcard-per">7.4 ريال للظرف</div></div>
+            <div>
+              <div class="pcard-price">89 <sub>ر.س</sub></div>
+              <div class="pcard-per">7.4 ريال للظرف فقط</div>
+            </div>
             <div class="pcard-note">🎁 مثالي كهدية</div>
           </div>
-          <a href="https://wa.me/+966555200444?text=أريد طلب بوكس الترمس 12 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
+          <a href="https://wa.me/+966555200445?text=أريد طلب بوكس الترمس 12 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
         </div>
       </div>
+
+      <!-- PRODUCT 2 (Featured) -->
       <div class="pcard featured">
         <div class="pcard-photo">
           <img src="box2.jpg" alt="بوكس 30 ظرف">
           <div class="pcard-badge badge-gold">⭐ الأكثر طلباً</div>
+        </div>
+        <div class="pcard-urgency">
+          <span>🔥</span>
+          <span class="pcard-urgency-txt">الكميات محدودة — اطلب الآن قبل النفاذ</span>
         </div>
         <div class="pcard-body">
           <span class="pcard-tag">بوكس الكوب اليومي</span>
@@ -274,17 +387,52 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
             <div class="spec-row"><span class="spec-l">المدة</span><span class="spec-r">شهر كامل يومياً</span></div>
           </div>
           <div class="pcard-price-row">
-            <div><div class="pcard-price">115 <sub>ر.س</sub></div><div class="pcard-per">3.8 ريال للكوب</div></div>
+            <div>
+              <div class="pcard-price">115 <sub>ر.س</sub></div>
+              <div class="pcard-per">3.8 ريال للكوب فقط</div>
+            </div>
             <div class="pcard-note">💎 أفضل قيمة</div>
           </div>
-          <a href="https://wa.me/+966555200444?text=أريد طلب بوكس الكوب 30 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
+          <a href="https://wa.me/+966555200445?text=أريد طلب بوكس الكوب 30 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="sec tinted" id="ingredients">
+<!-- WHY JEHAIR — COMPARISON TABLE -->
+<section class="sec tinted">
+  <div class="inner">
+    <div class="center">
+      <span class="eyebrow">لماذا جهيّر؟</span>
+      <h2 class="sec-h">قهوة الشعير مقابل القهوة العادية</h2>
+      <div class="rule cx"></div>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th style="width:34%;">المعيار</th>
+            <th class="highlight">☕ جهيّر</th>
+            <th>قهوة عادية</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>الكافيين</td><td><span class="yes">✔</span> بدون كافيين</td><td><span class="no">✘</span> يحتوي كافيين</td></tr>
+          <tr><td>النوم الهادئ</td><td><span class="yes">✔</span> لا يؤثر على النوم</td><td><span class="no">✘</span> يسبب أرقاً</td></tr>
+          <tr><td>الهضم</td><td><span class="yes">✔</span> يدعم الهضم</td><td><span class="neutral">—</span> قد يسبب حموضة</td></tr>
+          <tr><td>مكوّنات طبيعية</td><td><span class="yes">✔</span> 6 مكوّنات نقية</td><td><span class="neutral">—</span> مواد معالجة</td></tr>
+          <tr><td>مناسب للحامل</td><td><span class="yes">✔</span> آمن (بإذن الطبيب)</td><td><span class="no">✘</span> غير مُنصح به</td></tr>
+          <tr><td>النكهة الخليجية</td><td><span class="yes">✔</span> هيل وزعفران طبيعي</td><td><span class="neutral">—</span> نكهة مُضافة</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section class="sec ltinted" id="ingredients">
   <div class="inner">
     <div class="ing-layout">
       <div>
@@ -306,6 +454,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
   </div>
 </section>
 
+<!-- BENEFITS -->
 <section class="sec">
   <div class="inner">
     <div class="center">
@@ -325,12 +474,14 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
   </div>
 </section>
 
+<!-- QUOTE -->
 <div class="quote-sec">
   <span class="quote-mark">"</span>
   <p class="quote-txt">وصفة الوالدة — في كل كوب دفء، وفي كل رشفة صحة</p>
   <div class="quote-by">◆ Jehair Natural Products ◆</div>
 </div>
 
+<!-- HOW TO -->
 <section class="sec tinted" id="how">
   <div class="inner">
     <div class="how-layout">
@@ -351,114 +502,125 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
   </div>
 </section>
 
-
-<section style="background:#F5EDD8;padding:48px 0;border-top:1px solid rgba(44,26,6,.09);">
-  <div style="max-width:1040px;margin:0 auto;padding:0 48px;">
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;">
-      <div>
-        <div style="font-size:28px;margin-bottom:10px;">🚚</div>
-        <div style="font-size:14px;font-weight:700;color:#2C1A06;margin-bottom:5px;">الشحن والتوصيل</div>
-        <div style="font-size:13px;font-weight:300;color:#6B420F;line-height:1.7;">توصيل خلال 3-5 أيام عمل لجميع مناطق المملكة العربية السعودية</div>
+<!-- SHIPPING & POLICY -->
+<section class="sec">
+  <div class="inner">
+    <div class="center">
+      <span class="eyebrow">خدمة العملاء</span>
+      <h2 class="sec-h">طلبك بأمان معنا</h2>
+      <div class="rule cx"></div>
+    </div>
+    <div class="policy-grid">
+      <div class="policy-card">
+        <span class="policy-ico">🚚</span>
+        <div class="policy-h">الشحن والتوصيل</div>
+        <p class="policy-p">توصيل خلال 3-5 أيام عمل لجميع مناطق المملكة العربية السعودية</p>
       </div>
-      <div>
-        <div style="font-size:28px;margin-bottom:10px;">↩️</div>
-        <div style="font-size:14px;font-weight:700;color:#2C1A06;margin-bottom:5px;">سياسة الاستبدال</div>
-        <div style="font-size:13px;font-weight:300;color:#6B420F;line-height:1.7;">في حال وجود خلل في المنتج عند الاستلام نستبدله فوراً بدون أي تعقيد</div>
+      <div class="policy-card">
+        <span class="policy-ico">↩️</span>
+        <div class="policy-h">سياسة الاستبدال</div>
+        <p class="policy-p">في حال وجود خلل في المنتج عند الاستلام نستبدله فوراً بدون أي تعقيد</p>
       </div>
-      <div>
-        <div style="font-size:28px;margin-bottom:10px;">💬</div>
-        <div style="font-size:14px;font-weight:700;color:#2C1A06;margin-bottom:5px;">تواصل مباشر</div>
-        <div style="font-size:13px;font-weight:300;color:#6B420F;line-height:1.7;">نرد على واتساب خلال ساعات — 7 أيام في الأسبوع بدون انقطاع</div>
+      <div class="policy-card">
+        <span class="policy-ico">💬</span>
+        <div class="policy-h">تواصل مباشر</div>
+        <p class="policy-p">نرد على واتساب خلال ساعات — 7 أيام في الأسبوع بدون انقطاع</p>
       </div>
+    </div>
+    <div class="guarantee">
+      <span class="guarantee-ico">🛡️</span>
+      <div class="guarantee-h">ضمان رضاك التام</div>
+      <p class="guarantee-p">نثق بجودة منتجنا — إن لم تكن راضياً عن جودة المنتج عند الاستلام، نستبدله فوراً. رضاك هو أولويتنا.</p>
     </div>
   </div>
 </section>
 
-<section style="background:#F5EDD8;padding:72px 0;">
-  <div style="max-width:1040px;margin:0 auto;padding:0 48px;">
-    <div style="text-align:center;margin-bottom:40px;">
-      <span style="display:block;font-size:10px;letter-spacing:3px;color:#B8862A;text-transform:uppercase;margin-bottom:10px;">آراء العملاء</span>
-      <h2 style="font-family:'Amiri',serif;font-size:clamp(26px,4vw,42px);color:#2C1A06;">ماذا قالوا عنّا</h2>
+<!-- TESTIMONIALS -->
+<section class="sec tinted" id="reviews">
+  <div class="inner">
+    <div class="center" style="margin-bottom:40px;">
+      <span class="eyebrow">آراء العملاء</span>
+      <h2 class="sec-h">ماذا قالوا عنّا</h2>
       <div style="font-size:22px;margin-top:8px;">⭐⭐⭐⭐⭐</div>
+      <p class="sec-p mx" style="margin-top:10px;">+500 عميل راضٍ — تقييم 4.9 من 5</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-      <div style="background:#fff;border:1px solid rgba(44,26,6,.09);border-radius:16px;padding:22px;">
-        <div style="font-size:16px;margin-bottom:10px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-size:14px;font-weight:300;color:#2C1A06;line-height:1.8;margin-bottom:14px;font-style:italic;">«جربت بوكس الترمس في رحلة العائلة — الكل أحبّه. النكهة خفيفة وطيبة والهيل واضح. رح أطلب مرة ثانية»</p>
-        <div style="font-size:13px;font-weight:700;color:#B8862A;">أم سارة — الرياض</div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-txt">«جربت بوكس الترمس في رحلة العائلة — الكل أحبّه. النكهة خفيفة وطيبة والهيل واضح. رح أطلب مرة ثانية»</p>
+        <div class="review-author">أم سارة</div>
+        <div class="review-meta">الرياض · عميلة منذ 3 أشهر</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(44,26,6,.09);border-radius:16px;padding:22px;">
-        <div style="font-size:16px;margin-bottom:10px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-size:14px;font-weight:300;color:#2C1A06;line-height:1.8;margin-bottom:14px;font-style:italic;">«كنت أشرب قهوة كل يوم وكان يأثر على نومي. بدّلت لقهوة الشعير وصراحة ما حسّيت بفرق كبير في الطعم لكن النوم تحسّن»</p>
-        <div style="font-size:13px;font-weight:700;color:#B8862A;">عبدالله — جدة</div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-txt">«كنت أشرب قهوة كل يوم وكان يأثر على نومي. بدّلت لقهوة الشعير وصراحة ما حسّيت بفرق كبير في الطعم لكن النوم تحسّن»</p>
+        <div class="review-author">عبدالله</div>
+        <div class="review-meta">جدة · عميل منذ شهرين</div>
       </div>
-      <div style="background:#fff;border:1px solid rgba(44,26,6,.09);border-radius:16px;padding:22px;">
-        <div style="font-size:16px;margin-bottom:10px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-size:14px;font-weight:300;color:#2C1A06;line-height:1.8;margin-bottom:14px;font-style:italic;">«اشتريته كهدية لأمي وأعجبها جداً. التغليف أنيق ويصلح هدية. الظروف عملية ومريحة للاستخدام اليومي»</p>
-        <div style="font-size:13px;font-weight:700;color:#B8862A;">نورة — الدمام</div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-txt">«اشتريته كهدية لأمي وأعجبها جداً. التغليف أنيق ويصلح هدية. الظروف عملية ومريحة للاستخدام اليومي»</p>
+        <div class="review-author">نورة</div>
+        <div class="review-meta">الدمام · عميلة منذ شهر</div>
       </div>
     </div>
   </div>
 </section>
 
-<section style="background:#FFFFFF;padding:72px 0;border-top:1px solid rgba(44,26,6,.09);">
-  <div style="max-width:1040px;margin:0 auto;padding:0 48px;">
-    <div style="text-align:center;margin-bottom:40px;">
-      <span style="display:block;font-size:10px;letter-spacing:3px;color:#B8862A;text-transform:uppercase;margin-bottom:10px;">الأسئلة الشائعة</span>
-      <h2 style="font-family:'Amiri',serif;font-size:clamp(26px,4vw,42px);color:#2C1A06;">أسئلة وأجوبة</h2>
+<!-- FAQ -->
+<section class="sec">
+  <div class="inner">
+    <div class="center" style="margin-bottom:40px;">
+      <span class="eyebrow">الأسئلة الشائعة</span>
+      <h2 class="sec-h">أسئلة وأجوبة</h2>
     </div>
-    <div style="display:flex;flex-direction:column;gap:12px;max-width:680px;margin:0 auto;">
-      <details style="background:#FAF5EE;border:1px solid rgba(44,26,6,.09);border-radius:14px;padding:18px 22px;cursor:pointer;">
-        <summary style="font-size:15px;font-weight:700;color:#2C1A06;list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          ما الفرق بين البوكسين؟
-          <span style="color:#B8862A;font-size:20px;">+</span>
-        </summary>
-        <p style="font-size:14px;font-weight:300;color:#6B420F;line-height:1.8;margin-top:12px;">بوكس الترمس (12 ظرف) — كل ظرف يكفي لتر كامل، مثالي للعائلة والرحلات والمجالس. بوكس الكوب (30 ظرف) — كل ظرف لكوب 200 مل، مثالي للاستخدام اليومي الشخصي.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>ما الفرق بين البوكسين؟ <span class="faq-icon">+</span></summary>
+        <p class="faq-body">بوكس الترمس (12 ظرف) — كل ظرف يكفي لتر كامل، مثالي للعائلة والرحلات والمجالس. بوكس الكوب (30 ظرف) — كل ظرف لكوب 200 مل، مثالي للاستخدام اليومي الشخصي بأفضل قيمة.</p>
       </details>
-      <details style="background:#FAF5EE;border:1px solid rgba(44,26,6,.09);border-radius:14px;padding:18px 22px;cursor:pointer;">
-        <summary style="font-size:15px;font-weight:700;color:#2C1A06;list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          هل المنتج مناسب لمرضى السكري؟
-          <span style="color:#B8862A;font-size:20px;">+</span>
-        </summary>
-        <p style="font-size:14px;font-weight:300;color:#6B420F;line-height:1.8;margin-top:12px;">المنتج طبيعي وخالٍ من السكر المضاف والكافيين. ننصح دائماً باستشارة الطبيب المعالج قبل إضافة أي منتج غذائي جديد للنظام الغذائي.</p>
+      <details class="faq-item">
+        <summary>هل المنتج مناسب لمرضى السكري؟ <span class="faq-icon">+</span></summary>
+        <p class="faq-body">المنتج طبيعي وخالٍ من السكر المضاف والكافيين. ننصح دائماً باستشارة الطبيب المعالج قبل إضافة أي منتج غذائي جديد للنظام الغذائي.</p>
       </details>
-      <details style="background:#FAF5EE;border:1px solid rgba(44,26,6,.09);border-radius:14px;padding:18px 22px;cursor:pointer;">
-        <summary style="font-size:15px;font-weight:700;color:#2C1A06;list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          هل يمكن إضافة السكر أو الحليب؟
-          <span style="color:#B8862A;font-size:20px;">+</span>
-        </summary>
-        <p style="font-size:14px;font-weight:300;color:#6B420F;line-height:1.8;margin-top:12px;">بالتأكيد — يمكن تناوله سادة أو مع حليب أو عسل أو سكر حسب الذوق الشخصي. كثير من عملائنا يفضلونه مع رشة هيل إضافية.</p>
+      <details class="faq-item">
+        <summary>هل يمكن إضافة السكر أو الحليب؟ <span class="faq-icon">+</span></summary>
+        <p class="faq-body">بالتأكيد — يمكن تناوله سادة أو مع حليب أو عسل أو سكر حسب الذوق الشخصي. كثير من عملائنا يفضلونه مع رشة هيل إضافية.</p>
       </details>
-      <details style="background:#FAF5EE;border:1px solid rgba(44,26,6,.09);border-radius:14px;padding:18px 22px;cursor:pointer;">
-        <summary style="font-size:15px;font-weight:700;color:#2C1A06;list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          كم مدة صلاحية المنتج؟
-          <span style="color:#B8862A;font-size:20px;">+</span>
-        </summary>
-        <p style="font-size:14px;font-weight:300;color:#6B420F;line-height:1.8;margin-top:12px;">مدة الصلاحية مكتوبة على كل ظرف. يُحفظ في مكان جاف بعيد عن الرطوبة والحرارة المباشرة للحفاظ على الجودة والنكهة.</p>
+      <details class="faq-item">
+        <summary>كم مدة صلاحية المنتج؟ <span class="faq-icon">+</span></summary>
+        <p class="faq-body">مدة الصلاحية مكتوبة على كل ظرف. يُحفظ في مكان جاف بعيد عن الرطوبة والحرارة المباشرة للحفاظ على الجودة والنكهة.</p>
       </details>
-      <details style="background:#FAF5EE;border:1px solid rgba(44,26,6,.09);border-radius:14px;padding:18px 22px;cursor:pointer;">
-        <summary style="font-size:15px;font-weight:700;color:#2C1A06;list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          كيف أطلب وكم وقت التوصيل؟
-          <span style="color:#B8862A;font-size:20px;">+</span>
-        </summary>
-        <p style="font-size:14px;font-weight:300;color:#6B420F;line-height:1.8;margin-top:12px;">اضغط أي زر "اطلب عبر واتساب" وسنرد عليك فوراً. التوصيل خلال 3-5 أيام عمل لجميع مناطق المملكة عبر شركات الشحن المعتمدة.</p>
+      <details class="faq-item">
+        <summary>كيف أطلب وكم وقت التوصيل؟ <span class="faq-icon">+</span></summary>
+        <p class="faq-body">اضغط أي زر "اطلب عبر واتساب" وسنرد عليك فوراً. التوصيل خلال 3-5 أيام عمل لجميع مناطق المملكة عبر شركات الشحن المعتمدة.</p>
       </details>
     </div>
   </div>
 </section>
+
+<!-- CTA SECTION -->
 <section class="cta-sec" id="order">
   <img src="logo.png" class="cta-logo" alt="Jehair">
-  <h2 class="cta-h">اطلب الآن</h2>
-  <p class="cta-p">شحن سريع لجميع مناطق المملكة</p>
+  <h2 class="cta-h">ابدأ رحلتك الصحية اليوم</h2>
+  <p class="cta-p">انضم لأكثر من 500 عميل اختاروا جهيّر — شحن سريع لجميع مناطق المملكة</p>
   <div class="cta-prices">
-    <div class="cta-price"><div class="cta-price-n">89 ر.س</div><div class="cta-price-l">بوكس 12 ظرف ترمس</div></div>
-    <div class="cta-price inv"><div class="cta-price-n">115 ر.س</div><div class="cta-price-l">بوكس 30 ظرف كوب</div></div>
+    <div class="cta-price">
+      <div class="cta-price-n">89 ر.س</div>
+      <div class="cta-price-l">بوكس 12 ظرف ترمس</div>
+    </div>
+    <div class="cta-price inv">
+      <div class="cta-price-n">115 ر.س</div>
+      <div class="cta-price-l">بوكس 30 ظرف كوب</div>
+    </div>
   </div>
-  <a href="https://wa.me/+966555200444?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-whatsapp">📱 اطلب عبر واتساب</a>
+  <a href="https://wa.me/+966555200445?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-whatsapp">📱 اطلب عبر واتساب</a>
+  <div class="cta-guarantee">🛡️ ضمان الاستبدال عند الاستلام · رضاك مضمون</div>
   <div class="cta-small">متاح 7 أيام في الأسبوع</div>
-  <a href="tel:+966555200444" class="cta-phone">+966 500 000 000</a>
+  <a href="tel:+966555200445" class="cta-phone">+966 555 200 445</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-left">
     <img src="logo.png" class="footer-logo" alt="Jehair">
@@ -466,13 +628,15 @@ footer p{font-size:11px;color:rgba(255,255,255,.22);}
   </div>
   <p>© 2026 Jehair Natural Products · جميع الحقوق محفوظة</p>
   <div class="footer-links">
-    <a href="https://wa.me/+966555200444">واتساب</a>
-    <a href="tel:+966555200444">اتصل بنا</a>
+    <a href="https://wa.me/+966555200445">واتساب</a>
+    <a href="tel:+966555200445">اتصل بنا</a>
   </div>
 </footer>
 
+<!-- MOBILE STICKY WA -->
 <div class="mobile-wa">
-  <a href="https://wa.me/+966555200444?text=أريد الطلب من Jehair" class="btn-primary" style="box-shadow:0 6px 24px rgba(0,0,0,.25);">📲 اطلب الآن</a>
+  <a href="https://wa.me/+966555200445?text=أريد الطلب من Jehair" class="btn-primary" style="box-shadow:0 6px 28px rgba(0,0,0,.2);">📲 اطلب الآن</a>
 </div>
+
 </body>
 </html>
