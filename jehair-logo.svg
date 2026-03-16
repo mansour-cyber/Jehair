@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320" width="280" height="320">
+  <defs>
+    <style>
+      .brand-circle { fill: none; stroke: #B8902A; stroke-width: 1.5; }
+      .brand-text-main { font-family: Georgia, 'Times New Roman', serif; font-size: 52px; font-weight: 700; fill: #3C2210; letter-spacing: 1px; }
+      .brand-text-sub { font-family: Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #B8902A; letter-spacing: 3px; }
+      .brand-rule { fill: #B8902A; }
+      .emblem { fill: #B8902A; }
+    </style>
+  </defs>
+
+  <!-- Outer circle -->
+  <circle cx="140" cy="88" r="62" class="brand-circle"/>
+
+  <!-- Wheat stalk - center -->
+  <line x1="140" y1="120" x2="140" y2="52" stroke="#B8902A" stroke-width="1.4"/>
+
+  <!-- Left branch -->
+  <path d="M140 100 Q122 88 118 72 Q128 76 140 86" fill="#B8902A" opacity="0.9"/>
+  <path d="M140 84 Q120 70 116 54 Q128 60 140 72" fill="#B8902A" opacity="0.85"/>
+
+  <!-- Right branch -->
+  <path d="M140 100 Q158 88 162 72 Q152 76 140 86" fill="#B8902A" opacity="0.9"/>
+  <path d="M140 84 Q160 70 164 54 Q152 60 140 72" fill="#B8902A" opacity="0.85"/>
+
+  <!-- Top grain -->
+  <ellipse cx="140" cy="49" rx="5" ry="8" fill="#B8902A"/>
+  <ellipse cx="132" cy="53" rx="4" ry="7" fill="#B8902A" transform="rotate(-18 132 53)"/>
+  <ellipse cx="148" cy="53" rx="4" ry="7" fill="#B8902A" transform="rotate(18 148 53)"/>
+
+  <!-- Bottom leaf/sprig -->
+  <path d="M140 118 Q130 128 126 138 Q134 132 140 122" fill="#B8902A" opacity="0.7"/>
+  <path d="M140 118 Q150 128 154 138 Q146 132 140 122" fill="#B8902A" opacity="0.7"/>
+
+  <!-- Brand name -->
+  <text x="140" y="210" text-anchor="middle" class="brand-text-main">Jehair</text>
+
+  <!-- Rule left -->
+  <rect x="28" y="228" width="52" height="1.2" class="brand-rule"/>
+  <!-- Rule right -->
+  <rect x="200" y="228" width="52" height="1.2" class="brand-rule"/>
+
+  <!-- Subtitle -->
+  <text x="140" y="243" text-anchor="middle" class="brand-text-sub">NATURAL PRODUCTS</text>
+</svg>
