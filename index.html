@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>جهيّر — قهوة الشعير الأصلية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --ink:#2C1A06;--ink2:#6B420F;--gold:#B8862A;--gold2:#D4A84A;
+  --cream:#FDFAF4;--sand:#F5EDD8;--pale:#EDE0C8;
+  --white:#FFFFFF;--bdr:rgba(44,26,6,.09);--r:16px;--w:1040px;
+}
+body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);direction:rtl;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+.nav{position:sticky;top:0;z-index:99;background:rgba(253,250,244,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);height:68px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo{height:48px;width:auto;}
+.nav-tagline{font-size:10px;letter-spacing:2px;color:var(--gold);margin-top:2px;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-link{font-size:13px;color:var(--ink2);text-decoration:none;font-weight:500;padding:7px 15px;border-radius:50px;transition:all .2s;}
+.nav-link:hover{background:var(--sand);}
+.nav-wa{background:var(--ink);color:#fff;font-family:'Tajawal',sans-serif;font-weight:700;font-size:13px;padding:10px 22px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:7px;transition:all .25s;}
+.nav-wa:hover{background:var(--ink2);transform:translateY(-1px);}
+
+.hero{position:relative;min-height:100vh;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to left,rgba(44,26,6,0) 35%,rgba(44,26,6,.75) 65%,rgba(44,26,6,.92) 100%);}
+.hero-inner{position:relative;z-index:2;min-height:100vh;max-width:var(--w);margin:0 auto;padding:0 48px;display:flex;align-items:center;}
+.hero-content{max-width:480px;padding:80px 0;}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:18px;}
+.hero-logo-inline{height:60px;margin-bottom:16px;display:block;}
+.hero-h{font-family:'Amiri',serif;font-size:clamp(52px,7vw,84px);color:#fff;line-height:.95;margin-bottom:16px;}
+.hero-h em{color:var(--gold2);font-style:italic;}
+.hero-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.85;max-width:400px;margin-bottom:32px;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+.hero-tag{font-size:12px;padding:6px 14px;border-radius:50px;border:1px solid rgba(212,168,74,.35);color:rgba(255,255,255,.65);}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:15px;padding:14px 34px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;box-shadow:0 6px 24px rgba(184,134,42,.35);border:none;cursor:pointer;}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-outline{background:transparent;color:rgba(255,255,255,.75);font-family:'Tajawal',sans-serif;font-weight:600;font-size:15px;padding:14px 30px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,.25);transition:all .3s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline:hover{background:rgba(255,255,255,.08);}
+
+.trust{background:var(--pale);border-bottom:1px solid var(--bdr);padding:16px 48px;}
+.trust-row{max-width:var(--w);margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:12px;}
+.trust-item{display:flex;align-items:center;gap:8px;}
+.t-ico{font-size:17px;}
+.t-txt{font-size:13px;color:var(--ink2);font-weight:500;}
+
+.mosaic{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:340px 280px;gap:3px;background:var(--ink);}
+.mosaic-a{grid-row:1/3;overflow:hidden;}
+.mosaic-b,.mosaic-c{overflow:hidden;}
+.mosaic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;}
+.mosaic>div:hover img{transform:scale(1.04);}
+
+.sec{padding:84px 0;}
+.sec.tinted{background:var(--sand);}
+.inner{max-width:var(--w);margin:0 auto;padding:0 48px;}
+.center{text-align:center;}
+.eyebrow{display:block;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
+.sec-h{font-family:'Amiri',serif;font-size:clamp(28px,4vw,46px);color:var(--ink);line-height:1.1;margin-bottom:12px;}
+.sec-p{font-size:15px;font-weight:300;color:var(--ink2);line-height:1.9;margin-bottom:28px;max-width:520px;}
+.sec-p.mx{margin-left:auto;margin-right:auto;}
+.rule{width:44px;height:2px;background:var(--gold2);margin:12px 0 20px;}
+.rule.cx{margin-left:auto;margin-right:auto;}
+.hr{width:100%;height:1px;background:var(--bdr);margin:32px 0;}
+
+.products{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px;}
+.pcard{background:var(--white);border:1px solid var(--bdr);border-radius:20px;overflow:hidden;transition:box-shadow .3s,transform .3s;}
+.pcard:hover{box-shadow:0 14px 44px rgba(44,26,6,.1);transform:translateY(-3px);}
+.pcard.featured{border-color:rgba(184,134,42,.3);}
+.pcard-photo{height:300px;overflow:hidden;position:relative;}
+.pcard-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.pcard:hover .pcard-photo img{transform:scale(1.04);}
+.pcard-badge{position:absolute;top:14px;right:14px;font-size:11px;font-weight:700;padding:5px 13px;border-radius:50px;letter-spacing:.5px;}
+.badge-neutral{background:rgba(44,26,6,.7);color:rgba(255,255,255,.9);}
+.badge-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);}
+.pcard-body{padding:26px 28px 30px;}
+.pcard-tag{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:block;}
+.pcard-name{font-family:'Amiri',serif;font-size:26px;color:var(--ink);line-height:1.1;margin-bottom:8px;}
+.pcard-desc{font-size:14px;font-weight:300;color:var(--ink2);line-height:1.75;margin-bottom:16px;}
+.pcard-specs{background:var(--sand);border-radius:12px;padding:14px 16px;margin-bottom:18px;display:flex;flex-direction:column;gap:6px;}
+.spec-row{display:flex;justify-content:space-between;}
+.spec-l{font-size:13px;font-weight:300;color:var(--ink2);}
+.spec-r{font-size:13px;font-weight:700;color:var(--ink);}
+.pcard-price-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
+.pcard-price{font-family:'Amiri',serif;font-size:36px;color:var(--ink);line-height:1;}
+.pcard-price sub{font-size:15px;color:var(--ink2);font-weight:300;}
+.pcard-per{font-size:12px;color:var(--gold);font-weight:600;margin-top:3px;}
+.pcard-note{font-size:12px;color:var(--ink2);font-weight:300;}
+.btn-wa{width:100%;padding:14px;border-radius:50px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink);font-family:'Tajawal',sans-serif;font-weight:900;font-size:14px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .3s;text-decoration:none;box-shadow:0 4px 16px rgba(184,134,42,.28);}
+.btn-wa:hover{transform:translateY(-2px);}
+
+.ing-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+.ing-photo,.how-photo{width:100%;border-radius:20px;display:block;box-shadow:0 12px 40px rgba(44,26,6,.12);}
+.ing-rows{display:flex;flex-direction:column;gap:10px;}
+.ing-row{display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--white);border:1px solid var(--bdr);border-radius:var(--r);transition:all .2s;}
+.ing-row:hover{border-color:rgba(184,134,42,.3);background:var(--sand);}
+.ing-ico{font-size:24px;flex-shrink:0;}
+.ing-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.ing-desc{font-size:12px;font-weight:300;color:var(--ink2);line-height:1.5;}
+
+.bens{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;}
+.ben{background:var(--white);border:1px solid var(--bdr);border-radius:var(--r);padding:20px;transition:all .25s;}
+.ben:hover{border-color:rgba(184,134,42,.25);box-shadow:0 4px 16px rgba(44,26,6,.06);}
+.ben-ico{font-size:26px;margin-bottom:10px;display:block;}
+.ben-h{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:5px;}
+.ben-p{font-size:12px;font-weight:300;color:var(--ink2);line-height:1.7;}
+
+.how-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+.how-steps{display:flex;flex-direction:column;gap:18px;}
+.how-step{display:flex;gap:14px;align-items:flex-start;}
+.how-num{width:40px;height:40px;min-width:40px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Amiri',serif;font-size:17px;font-weight:700;flex-shrink:0;}
+.how-h{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.how-p{font-size:13px;font-weight:300;color:var(--ink2);line-height:1.7;}
+
+.quote-sec{background:var(--ink);padding:72px 48px;text-align:center;}
+.quote-mark{font-family:'Amiri',serif;font-size:80px;color:rgba(212,168,74,.15);line-height:1;margin-bottom:-30px;display:block;}
+.quote-txt{font-family:'Amiri',serif;font-style:italic;font-size:clamp(20px,3vw,32px);color:rgba(255,255,255,.85);line-height:1.7;max-width:600px;margin:0 auto 18px;}
+.quote-by{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,.25);text-transform:uppercase;}
+
+.cta-sec{background:var(--sand);padding:80px 48px;text-align:center;border-top:1px solid var(--bdr);}
+.cta-logo{height:72px;margin:0 auto 28px;display:block;}
+.cta-h{font-family:'Amiri',serif;font-size:clamp(32px,5vw,54px);color:var(--ink);margin-bottom:10px;}
+.cta-p{font-size:15px;font-weight:300;color:var(--ink2);line-height:1.85;max-width:400px;margin:0 auto 20px;}
+.cta-prices{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:16px 0 4px;}
+.cta-price{background:var(--white);border:1px solid var(--bdr);border-radius:14px;padding:14px 22px;text-align:center;min-width:150px;}
+.cta-price.inv{background:var(--ink);border-color:transparent;}
+.cta-price-n{font-family:'Amiri',serif;font-size:26px;color:var(--ink);line-height:1;}
+.cta-price.inv .cta-price-n{color:var(--gold2);}
+.cta-price-l{font-size:12px;color:var(--ink2);margin-top:3px;font-weight:300;}
+.cta-price.inv .cta-price-l{color:rgba(255,255,255,.4);}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:#22C55E;color:#fff;font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;padding:16px 42px;border-radius:50px;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(34,197,94,.28);margin-top:24px;}
+.btn-whatsapp:hover{transform:translateY(-2px);}
+.cta-small{font-size:12px;color:var(--ink2);opacity:.55;margin-top:10px;}
+.cta-phone{display:block;font-size:14px;font-weight:500;color:var(--ink2);margin-top:5px;letter-spacing:.5px;}
+
+footer{background:var(--ink);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:2px solid var(--gold);}
+.footer-left{display:flex;align-items:center;gap:14px;}
+.footer-logo{height:38px;filter:brightness(0) invert(1);opacity:.75;}
+.footer-name{font-family:'Amiri',serif;font-size:18px;color:rgba(255,255,255,.7);}
+footer p{font-size:11px;color:rgba(255,255,255,.22);}
+.footer-links{display:flex;gap:18px;}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--gold2);}
+
+.mobile-wa{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:98;}
+
+@media(max-width:860px){
+  .nav{padding:0 20px;}.nav-links{display:none;}
+  .hero-overlay{background:linear-gradient(to top,rgba(44,26,6,.96) 42%,rgba(44,26,6,.5) 100%);}
+  .hero-inner{padding:0 24px;align-items:flex-end;}
+  .hero-content{padding:40px 0 80px;max-width:100%;}
+  .mosaic{grid-template-columns:1fr;grid-template-rows:280px 220px 220px;}
+  .mosaic-a{grid-row:auto;}
+  .products{grid-template-columns:1fr;}
+  .ing-layout,.how-layout{grid-template-columns:1fr;}
+  .bens{grid-template-columns:1fr 1fr;}
+  .inner{padding:0 20px;}.sec{padding:60px 0;}
+  .trust{padding:14px 20px;}
+  .cta-sec,.quote-sec{padding:60px 20px;}
+  footer{flex-direction:column;text-align:center;padding:28px 20px;}
+  .mobile-wa{display:block;}
+}
+@media(max-width:520px){
+  .bens{grid-template-columns:1fr;}
+  .hero-h{font-size:48px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#top" class="nav-brand">
+    <img src="logo.png" class="nav-logo" alt="Jehair">
+    <div class="nav-tagline">NATURAL PRODUCTS</div>
+  </a>
+  <div class="nav-links">
+    <a href="#products" class="nav-link">المنتجات</a>
+    <a href="#ingredients" class="nav-link">المكوّنات</a>
+    <a href="#how" class="nav-link">التحضير</a>
+  </div>
+  <a href="https://wa.me/+966500000000" class="nav-wa">📲 اطلب الآن</a>
+</nav>
+
+<section class="hero" id="top">
+  <img src="hero.jpg" class="hero-bg" alt="">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-kicker">قهوة الشعير الأصلية</div>
+      <img src="logo.png" class="hero-logo-inline" alt="Jehair">
+      <h1 class="hero-h">قهوة<br><em>الشعير</em><br>الأصلية</h1>
+      <p class="hero-p">وصفة الوالدة — ستة مكوّنات طبيعية نقية، مُعبّأة في ظروف أنيقة. تحضير فوري، نكهة أصيلة، فوائد حقيقية.</p>
+      <div class="hero-tags">
+        <span class="hero-tag">🌾 بيتا-جلوكان طبيعي</span>
+        <span class="hero-tag">⚡ بلا كافيين</span>
+        <span class="hero-tag">🌿 100% طبيعي</span>
+        <span class="hero-tag">✨ ظروف فردية</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary">🛍️ اطلب الآن</a>
+        <a href="#ingredients" class="btn-outline">اكتشف المكوّنات</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-row">
+    <div class="trust-item"><span class="t-ico">🌿</span><span class="t-txt">100% طبيعي</span></div>
+    <div class="trust-item"><span class="t-ico">⚡</span><span class="t-txt">بلا كافيين</span></div>
+    <div class="trust-item"><span class="t-ico">✨</span><span class="t-txt">ظروف فردية أنيقة</span></div>
+    <div class="trust-item"><span class="t-ico">🚀</span><span class="t-txt">شحن سريع للمملكة</span></div>
+    <div class="trust-item"><span class="t-ico">📲</span><span class="t-txt">طلب مباشر واتساب</span></div>
+  </div>
+</div>
+
+<div class="mosaic">
+  <div class="mosaic-a"><img src="hero2.jpg" alt="قهوة الشعير"></div>
+  <div class="mosaic-b"><img src="box1b.jpg" alt="بوكس الترمس" style="object-position:center top;"></div>
+  <div class="mosaic-c"><img src="box2.jpg" alt="بوكس الكوب"></div>
+</div>
+
+<section class="sec" id="products">
+  <div class="inner">
+    <div class="center">
+      <span class="eyebrow">اختر مقاسك</span>
+      <h2 class="sec-h">بوكسات قهوة الشعير</h2>
+      <div class="rule cx"></div>
+      <p class="sec-p mx">ظروف فردية مصمّمة بعناية — كل ظرف جرعة كاملة مثالية، سهلة الحمل وجميلة كهدية</p>
+    </div>
+    <div class="products">
+      <div class="pcard">
+        <div class="pcard-photo">
+          <img src="box1b.jpg" alt="بوكس 12 ظرف">
+          <div class="pcard-badge badge-neutral">12 ظرف</div>
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-tag">بوكس الترمس</span>
+          <div class="pcard-name">بوكس الترمس<br>12 ظرف</div>
+          <p class="pcard-desc">مثالي للعائلة والرحلات — كل ظرف يكفي لترمس كامل بحجم لتر واحد.</p>
+          <div class="pcard-specs">
+            <div class="spec-row"><span class="spec-l">عدد الظروف</span><span class="spec-r">12 ظرف</span></div>
+            <div class="spec-row"><span class="spec-l">حجم كل ظرف</span><span class="spec-r">يكفي لتر كامل</span></div>
+            <div class="spec-row"><span class="spec-l">مناسب لـ</span><span class="spec-r">الترمس والدلة</span></div>
+          </div>
+          <div class="pcard-price-row">
+            <div><div class="pcard-price">89 <sub>ر.س</sub></div><div class="pcard-per">7.4 ريال للظرف</div></div>
+            <div class="pcard-note">🎁 مثالي كهدية</div>
+          </div>
+          <a href="https://wa.me/+966500000000?text=أريد طلب بوكس الترمس 12 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
+        </div>
+      </div>
+      <div class="pcard featured">
+        <div class="pcard-photo">
+          <img src="box2.jpg" alt="بوكس 30 ظرف">
+          <div class="pcard-badge badge-gold">⭐ الأكثر طلباً</div>
+        </div>
+        <div class="pcard-body">
+          <span class="pcard-tag">بوكس الكوب اليومي</span>
+          <div class="pcard-name">بوكس الكوب<br>30 ظرف</div>
+          <p class="pcard-desc">للاستخدام اليومي — شهر كامل من الصحة. كوب 200 مل في كل ظرف.</p>
+          <div class="pcard-specs">
+            <div class="spec-row"><span class="spec-l">عدد الظروف</span><span class="spec-r">30 ظرف</span></div>
+            <div class="spec-row"><span class="spec-l">حجم كل ظرف</span><span class="spec-r">كوب 200 مل</span></div>
+            <div class="spec-row"><span class="spec-l">المدة</span><span class="spec-r">شهر كامل يومياً</span></div>
+          </div>
+          <div class="pcard-price-row">
+            <div><div class="pcard-price">115 <sub>ر.س</sub></div><div class="pcard-per">3.8 ريال للكوب</div></div>
+            <div class="pcard-note">💎 أفضل قيمة</div>
+          </div>
+          <a href="https://wa.me/+966500000000?text=أريد طلب بوكس الكوب 30 ظرف" class="btn-wa">📲 اطلب عبر واتساب</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tinted" id="ingredients">
+  <div class="inner">
+    <div class="ing-layout">
+      <div>
+        <span class="eyebrow">المكوّنات</span>
+        <h2 class="sec-h">ستة مكوّنات —<br>كل واحد بقصة</h2>
+        <div class="rule"></div>
+        <p class="sec-p">اخترنا كل مكوّن بعناية لفائدة محددة — مدعومة بـ 148+ دراسة علمية عالمية</p>
+        <div class="ing-rows">
+          <div class="ing-row"><span class="ing-ico">🌾</span><div><div class="ing-name">الشعير البلدي</div><div class="ing-desc">بيتا-جلوكان يدعم توازن السكر ويخفض الكوليسترول</div></div></div>
+          <div class="ing-row"><span class="ing-ico">🟡</span><div><div class="ing-name">الكركم</div><div class="ing-desc">كركمين مضاد التهاب — مثبت في +148 دراسة</div></div></div>
+          <div class="ing-row"><span class="ing-ico">🌸</span><div><div class="ing-name">الزعفران</div><div class="ing-desc">يرفع المزاج ويقوّي الذاكرة بشكل طبيعي</div></div></div>
+          <div class="ing-row"><span class="ing-ico">🫚</span><div><div class="ing-name">الهيل</div><div class="ing-desc">يحسّن الهضم ويعطر النفس — طعم خليجي أصيل</div></div></div>
+          <div class="ing-row"><span class="ing-ico">🫙</span><div><div class="ing-name">الزنجبيل</div><div class="ing-desc">ينشّط الدورة الدموية ويدعم الجهاز الهضمي</div></div></div>
+          <div class="ing-row"><span class="ing-ico">🌼</span><div><div class="ing-name">العصفر</div><div class="ing-desc">مضاد أكسدة طبيعي يحسّن الدورة الدموية</div></div></div>
+        </div>
+      </div>
+      <div><img src="ing.jpg" class="ing-photo" alt="مكوّنات قهوة الشعير"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="inner">
+    <div class="center">
+      <span class="eyebrow">الفوائد</span>
+      <h2 class="sec-h">لماذا قهوة الشعير؟</h2>
+      <div class="rule cx"></div>
+      <p class="sec-p mx">فوائد حقيقية مدعومة بأبحاث PMC و NIH</p>
+    </div>
+    <div class="bens">
+      <div class="ben"><span class="ben-ico">❤️</span><div class="ben-h">صحة القلب</div><p class="ben-p">بيتا-جلوكان يخفض الكوليسترول الضار في 11 تجربة سريرية</p></div>
+      <div class="ben"><span class="ben-ico">🩺</span><div class="ben-h">دعم توازن السكر</div><p class="ben-p">بلا كافيين يُضعف الأنسولين — مع بيتا-جلوكان يُهدّئ ارتفاع السكر</p></div>
+      <div class="ben"><span class="ben-ico">🧠</span><div class="ben-h">تركيز وذاكرة</div><p class="ben-p">الزعفران والكركم يعززان الأداء الذهني بشكل طبيعي</p></div>
+      <div class="ben"><span class="ben-ico">🌿</span><div class="ben-h">هضم صحي</div><p class="ben-p">الهيل والزنجبيل يريحان الأمعاء ويقللان الانتفاخ</p></div>
+      <div class="ben"><span class="ben-ico">✨</span><div class="ben-h">طاقة نظيفة</div><p class="ben-p">طاقة مستدامة بدون قلق — مناسب للحوامل وكبار السن</p></div>
+      <div class="ben"><span class="ben-ico">🛡️</span><div class="ben-h">مناعة قوية</div><p class="ben-p">مضادات الأكسدة الستة تحمي الخلايا وتعزز المقاومة</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="quote-sec">
+  <span class="quote-mark">"</span>
+  <p class="quote-txt">وصفة الوالدة — في كل كوب دفء، وفي كل رشفة صحة</p>
+  <div class="quote-by">◆ Jehair Natural Products ◆</div>
+</div>
+
+<section class="sec tinted" id="how">
+  <div class="inner">
+    <div class="how-layout">
+      <div>
+        <span class="eyebrow">طريقة التحضير</span>
+        <h2 class="sec-h">جاهز في<br>30 ثانية</h2>
+        <div class="rule"></div>
+        <p class="sec-p">سهل وسريع كقهوتك المعتادة — لكن بفوائد استثنائية</p>
+        <div class="how-steps">
+          <div class="how-step"><div class="how-num">١</div><div><div class="how-h">افتح الظرف</div><div class="how-p">الجرعة المثالية جاهزة بداخله</div></div></div>
+          <div class="how-step"><div class="how-num">٢</div><div><div class="how-h">أضف ماء ساخن</div><div class="how-p">لتر للترمس — أو 200 مل للكوب</div></div></div>
+          <div class="how-step"><div class="how-num">٣</div><div><div class="how-h">قلّب 30 ثانية</div><div class="how-p">حتى تتحد المكوّنات بالكامل</div></div></div>
+          <div class="how-step"><div class="how-num">٤</div><div><div class="how-h">استمتع 🍵</div><div class="how-p">أضف عسلاً أو حليباً حسب رغبتك</div></div></div>
+        </div>
+      </div>
+      <div><img src="how.jpg" class="how-photo" alt="طريقة التحضير"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec" id="order">
+  <img src="logo.png" class="cta-logo" alt="Jehair">
+  <h2 class="cta-h">اطلب الآن</h2>
+  <p class="cta-p">شحن سريع لجميع مناطق المملكة</p>
+  <div class="cta-prices">
+    <div class="cta-price"><div class="cta-price-n">89 ر.س</div><div class="cta-price-l">بوكس 12 ظرف ترمس</div></div>
+    <div class="cta-price inv"><div class="cta-price-n">115 ر.س</div><div class="cta-price-l">بوكس 30 ظرف كوب</div></div>
+  </div>
+  <a href="https://wa.me/+966500000000?text=السلام عليكم، أريد الطلب من Jehair 🌾" class="btn-whatsapp">📱 اطلب عبر واتساب</a>
+  <div class="cta-small">متاح 7 أيام في الأسبوع</div>
+  <a href="tel:+966500000000" class="cta-phone">+966 500 000 000</a>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <img src="logo.png" class="footer-logo" alt="Jehair">
+    <div class="footer-name">Jehair Natural Products</div>
+  </div>
+  <p>© 2025 Jehair · قهوة الشعير الأصلية · جميع الحقوق محفوظة</p>
+  <div class="footer-links">
+    <a href="https://wa.me/+966500000000">واتساب</a>
+    <a href="tel:+966500000000">اتصل بنا</a>
+  </div>
+</footer>
+
+<div class="mobile-wa">
+  <a href="https://wa.me/+966500000000?text=أريد الطلب من Jehair" class="btn-primary" style="box-shadow:0 6px 24px rgba(0,0,0,.25);">📲 اطلب الآن</a>
+</div>
+</body>
+</html>
